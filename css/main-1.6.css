@@ -160,7 +160,7 @@ body {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endColorstr=#B2000000)";
 }
 
-#introtext .head-sarah {
+#introtext .head-bride {
     font-family: "EdwardianScrAltITCTT", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 5em;
     line-height: 100%;
@@ -171,7 +171,7 @@ body {
     margin-left: -10px;
     font-size: 0.7em;
 }
-#introtext .head-brad {
+#introtext .head-groom {
     font-family: "futura_ltbook", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 2em;
     line-height: 100%;
@@ -263,15 +263,17 @@ body {
     width: 200%; 
     height: 200%;
 }
+
 #bg-image img {
     position: absolute; 
     top: 0; 
     left: 0; 
     right: 0; 
     bottom: 0; 
-    margin: auto; 
+    margin: auto;
     min-width: 50%;
     min-height: 50%;
+    width: 50%;
 }
 
 #bg-container {
@@ -361,7 +363,7 @@ section h2 {
         padding: 30px 0 30px 0;
     }
 
-    #introtext .head-sarah {
+    #introtext .head-bride {
         font-size: 7em;
     }
     #introtext .amp {
@@ -370,7 +372,7 @@ section h2 {
         font-size: 0.9em;
         margin-left: -20px;
     }
-    #introtext .head-brad {
+    #introtext .head-groom {
         font-size: 3em;
     }
     #introtext .date {
@@ -472,14 +474,14 @@ section h2 {
     WIDE: Menu
    ============ */
 
-    #introtext .head-sarah {
+    #introtext .head-bride {
         font-size: 9em;
    }
     #introtext .amp {
         top: 0;
         font-size: 1em;
     }
-    #introtext .head-brad {
+    #introtext .head-groom {
         font-size: 4em;
     }
     #introtext .date {
@@ -548,14 +550,14 @@ section h2 {
         margin: 0 auto;
     }
 
-    #introtext .head-sarah {
+    #introtext .head-bride {
         font-size: 11em;
     }
     #introtext .amp {
         top: 0;
         font-size: 1.1em;
     }
-    #introtext .head-brad {
+    #introtext .head-groom {
         font-size: 5em;
     }
     #introtext .date {
@@ -816,10 +818,21 @@ section h2 {
     border-radius: 8px;
 }
 
-img.theinn  {
+img.location-image  {
+    border: 10px solid #090909;
 
-    text-align: center;
-    margin-bottom: 50px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 200px;
+    height: auto;
 }
 
 div.bp h2 {
