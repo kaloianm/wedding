@@ -1,0 +1,34 @@
+{
+  "name": "kandjwedding",
+  "version": "1.0.0",
+  "description": "Kal & Jocelyn Wedding Website",
+  "main": "server.js",
+  "scripts": {
+    "install": "mkdir -p public/js && browserify src/main.jsx -o public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaloianm/wedding.git"
+  },
+  "author": "Kaloian Manassiev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaloianm/wedding/issues"
+  },
+  "homepage": "https://github.com/kaloianm/wedding#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "react": "^15.4.1",
+    "react-bootstrap": "^0.30.7",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0",
+    "react-scroll": "^1.4.4",
+    "react-stickynode": "^1.2.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0"
+  }
+}
