@@ -1,13 +1,13 @@
-wedding
+Wedding website
 ------------------
 
-An HTML5 responsive design using jquery waypoints & scroll-to for a pleasant single-page navigation. This template makes use of media queries and scales well for all mobile form-factors.
+A React.js-based wedding website with registration form and server, backed by MongoDB.
 
 ## LICENSE
 
 (The MIT License)
 
-Copyright © Scal.io, LLC [Bradley Greenwood](http://github.com/bmgdev/)
+Copyright (C) 2016 Kaloian Manassiev
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
