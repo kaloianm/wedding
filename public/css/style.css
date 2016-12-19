@@ -48,6 +48,11 @@ textarea {
     resize: vertical;
 }
 
+a {
+    color: #b1bf92;
+    text-decoration: none;
+}
+
 .titlebar {
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
@@ -124,15 +129,34 @@ img.location-image {
 .hr-t {
     border-top:#1e1e1e solid 1px;
     margin: 80px auto 0 auto;
-    opacity:0.4;
+    opacity: 0.4;
     width: 97%;
 }
 
 .hr-b {
     border-bottom:#808080 solid 1px;
     margin: 0 auto 80px auto;
-    opacity:0.4;
+    opacity: 0.4;
     width: 97%;
+}
+
+.bride-name {
+    font-family: 'EdwardianScrAltITCTT';
+    font-size: 11em;
+    line-height: 100%;
+}
+
+.groom-name {
+    font-family: 'FuturaLTBook';
+    font-size: 5em;
+    line-height: 100%;
+}
+
+.wedding-date {
+    font-family: 'FuturaLTBook';
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 /**
@@ -141,13 +165,6 @@ img.location-image {
 
 nav {
     background-color: #333;
-}
-
-/* Hide the menu if running on a device with smaller screen */
-@media only screen and (max-width: 900px) {
-    nav {
-        display: none
-    }
 }
 
 nav ul {
@@ -214,6 +231,13 @@ nav ul li a.active {
 .container h2 {
     font-size: 1.7em;
     line-height: 120%;
+    padding: 0 20px;
+}
+
+.container p {
+    font-size: 1.4em;
+    line-height: 145%;
+    padding: 0 20px;
 }
 
 /**
@@ -342,4 +366,87 @@ nav ul li a.active {
 
     .offset-by-one-half.column,
     .offset-by-one-half.columns     { margin-left: 52%; }
+}
+
+/**
+ * Media queries
+ */
+
+@media only screen and (max-width: 1000px) {
+    .bride-name {
+        font-size: 8.8em;
+    }
+
+    .groom-name {
+        font-family: 'FuturaLTBook';
+        font-size: 4em;
+    }
+
+    .wedding-date {
+        font-family: 'FuturaLTBook';
+        font-size: 2.5em;
+    }
+
+    .page-header h1 {
+        font-size: 4.8em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /* Hide the menu if running on a device with smaller screen */
+    nav {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .bride-name {
+        font-size: 6.6em;
+    }
+
+    .groom-name {
+        font-family: 'FuturaLTBook';
+        font-size: 3em;
+    }
+
+    .wedding-date {
+        font-family: 'FuturaLTBook';
+        font-size: 1.7em;
+    }
+
+    .page-header h1 {
+        font-size: 3.6em;
+    }
+
+    .container h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .bride-name {
+        font-size: 3.3em;
+    }
+
+    .groom-name {
+        font-family: 'FuturaLTBook';
+        font-size: 1.5em;
+    }
+
+    .wedding-date {
+        font-family: 'FuturaLTBook';
+        font-size: 1.2em;
+    }
+
+    .page-header h1 {
+        font-size: 2em;
+    }
+
+    .container h2 {
+        font-size: 1em;
+    }
+
+    .container p {
+        font-size: 1em;
+    }
 }

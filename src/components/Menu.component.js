@@ -20,6 +20,9 @@ const styles = {
     inlineMenu: {
         display: 'inline',
     },
+    pointer: {
+        cursor: 'pointer',
+    }
 };
 
 class Menu extends React.Component {
@@ -39,7 +42,7 @@ class Menu extends React.Component {
                         key++;
                         return (
                             <li key={key}>
-                                <Link to={element.href} spy={true} smooth={true} duration={500}>
+                                <Link to={element.href} style={styles.pointer} spy={true} smooth={true} duration={500}>
                                     {element.label}
                                 </Link>
                             </li>
