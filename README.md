@@ -3,7 +3,12 @@ Wedding website
 
 A React.js-based wedding website with registration form and server, backed by MongoDB.
 
-## LICENSE
+# INSTALLATION
+
+npm install
+npm start
+
+# LICENSE
 
 (The MIT License)
 
