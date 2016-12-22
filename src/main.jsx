@@ -41,7 +41,7 @@ const websiteContent = (
 
     <div style={styles.whiteSpace}></div>
 
-    <Sticky enabled={true}>
+    <Sticky enabled={true} top={25}>
       <Menu id="menu"
             items={[{ label: 'THE BRIDE & GROOM', href: 'brideandgroom' },
                     { label: 'THE WEDDING', href: 'wedding' },
@@ -72,8 +72,7 @@ const websiteContent = (
         </Row>
       </Grid>
 
-      <div className="hr-t"></div>
-      <div className="hr-b"></div>
+      <hr />
 
       <Grid>
         <Row>
@@ -87,8 +86,7 @@ const websiteContent = (
         </Row>
       </Grid>
 
-      <div className="hr-t"></div>
-      <div className="hr-b"></div>
+      <hr />
 
       <Grid>
         <Row>
@@ -131,8 +129,7 @@ const websiteContent = (
         </Row>
       </Grid>
 
-      <div className="hr-t"></div>
-      <div className="hr-b"></div>
+      <hr />
 
       <Grid>
         <Row>
@@ -170,10 +167,14 @@ const websiteContent = (
           <p>Flight, ferry, etc ...</p>
         </Row>
 
+        <hr />
+
         <Row>
           <h2>ACCOMMODATIONS</h2>
           <p>Hotels, discouns, etc ...</p>
         </Row>
+
+        <hr />
 
         <Row>
           <h2>MAPS AND THINGS TO DO</h2>
@@ -181,6 +182,8 @@ const websiteContent = (
             <iframe width="600" height="450" frameBorder="0" style={{border:0}} src="https://goo.gl/OgRIJ6" allowFullScreen></iframe>
           </div>
         </Row>
+
+        <hr />
 
         <Row>
           <h2>ABOUT CROATIA</h2>

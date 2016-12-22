@@ -10,7 +10,6 @@
 
 import Nav from 'react-bootstrap/lib/Nav';
 import Navbar from 'react-bootstrap/lib/Navbar';
-import NavItem from 'react-bootstrap/lib/NavItem';
 import React from 'react';
 import Scroll from 'react-scroll';
 
