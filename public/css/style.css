@@ -53,23 +53,10 @@ a {
     text-decoration: none;
 }
 
-.titlebar {
-    background-color: black;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
-    display: block;
-    margin: auto;
-    width: 70%;
-    padding: 10px 0 10px 0;
-}
-
 section {
     background-color: black;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    height: 100%;
-    width: 80%;
-    margin: 200px auto;
     padding: 40px 40px 70px 40px;
     text-align: left;
 
@@ -78,6 +65,22 @@ section {
     -o-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
+}
+
+.section-wrapper {
+    height: 100%;
+    margin: 200px auto 200px auto;
+    width: 80%;
+}
+
+.titlebar {
+    background-color: black;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    padding: 10px 0 10px 0;
 }
 
 img.thumbnail {
@@ -124,20 +127,6 @@ img.location-image {
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-}
-
-.hr-t {
-    border-top:#1e1e1e solid 1px;
-    margin: 80px auto 0 auto;
-    opacity: 0.4;
-    width: 97%;
-}
-
-.hr-b {
-    border-bottom:#808080 solid 1px;
-    margin: 0 auto 80px auto;
-    opacity: 0.4;
-    width: 97%;
 }
 
 .bride-name {
@@ -228,13 +217,59 @@ nav ul li a.active {
     padding: 0 20px;
 }
 
-.container h2 {
+.panel-body h2 {
     font-size: 1.7em;
     line-height: 120%;
     padding: 0 20px;
 }
 
-.container p {
+.panel-body p {
+    font-size: 1.4em;
+    line-height: 145%;
+    padding: 0 20px;
+}
+
+.panel-body hr {
+    border-bottom:#808080 solid 1px;
+    border-top:#1e1e1e solid 1px;
+    margin: 60px auto 60px auto;
+    width: 90%;
+}
+
+.panel-body input {
+    border-radius: 8px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1.4em;
+    margin: 8px 0;
+    padding: 12px 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+
+.panel-body button {
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+.panel-body button:hover {
+    background-color: #b1bf92;
+    color: white;
+}
+
+.wizard-form {
     font-size: 1.4em;
     line-height: 145%;
     padding: 0 20px;
@@ -418,7 +453,7 @@ nav ul li a.active {
         font-size: 3.6em;
     }
 
-    .container h2 {
+    .panel-body h2 {
         font-size: 1.2em;
     }
 }
@@ -442,11 +477,11 @@ nav ul li a.active {
         font-size: 2em;
     }
 
-    .container h2 {
+    .panel-body h2 {
         font-size: 1em;
     }
 
-    .container p {
+    .panel-body p {
         font-size: 1em;
     }
 }

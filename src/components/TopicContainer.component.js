@@ -19,10 +19,15 @@ class TopicContainer extends React.Component {
 
     render() {
         return (
-            <section id={this.props.id}>
-                <PageHeader>{this.props.title}</PageHeader>
-                <Panel>{this.props.children}</Panel>
-            </section>
+            <div>
+                <div id={this.props.id} className="section-wrapper">
+                    &nbsp;
+                    <section>
+                        <PageHeader>{this.props.title}</PageHeader>
+                        <Panel>{this.props.children}</Panel>
+                    </section>
+                </div>
+            </div>
         );
     }
 }

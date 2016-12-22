@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/lib/Col';
 import Grid from 'react-bootstrap/lib/Grid';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Row from 'react-bootstrap/lib/Row'
+import Row from 'react-bootstrap/lib/Row';
 import Sticky from 'react-stickynode';
 import Image from 'react-bootstrap/lib/Image';
 
