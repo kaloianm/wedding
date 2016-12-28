@@ -1,12 +1,11 @@
 {
-  "name": "kandjwedding",
+  "name": "kalandjociwedding",
   "version": "1.0.0",
   "description": "Kal & Jocelyn Wedding Website",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "install": "mkdir -p public/js && browserify src/main.jsx -o public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
-    "start": "node ./server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./app.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,10 @@
   },
   "homepage": "https://github.com/kaloianm/wedding#readme",
   "dependencies": {
+    "es6-promise": "^4.0.5",
     "express": "^4.14.0",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^1.6.3",
     "react": "^15.4.1",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",

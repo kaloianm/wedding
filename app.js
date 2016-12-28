@@ -5,4 +5,4 @@
 'use strict';
 
 require('babel-register');
-require('./server.babel');
+require('./server/main');

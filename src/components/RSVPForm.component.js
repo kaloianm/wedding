@@ -4,236 +4,168 @@
 
 'use strict';
 
+import APIClient from '../api/api-client';
 import Col from 'react-bootstrap/lib/Col';
 import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import Grid from 'react-bootstrap/lib/Grid';
 import React from 'react';
 import Row from 'react-bootstrap/lib/Row';
 
-class FindNameForm extends React.Component {
-    render() {
-        const name = this.props.wizardState.name;
-        const onChange = this.props.wizardState.onChangeName;
-
-        return (
-            <span>
-                <Row>
-                    <Col className="twelve columns">
-                        <ControlLabel>Please enter the name from your invitation:</ControlLabel>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="twelve columns">
-                        <input type="text" value={name} onChange={onChange} />
-                    </Col>
-                </Row>
-            </span>
-        );
-    }
-}
-
-class PlusOneForm extends React.Component {
-    render() {
-        const guest = this.props.wizardState.guest;
-        const onChange = this.props.wizardState.onChangeGuest;
-
-        return (
-            <span>
-                <Row>
-                    <Col className="twelve columns">
-                        <ControlLabel>Are you bringing a guest?</ControlLabel>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="twelve columns">
-                        <input type="text" value={guest} onChange={onChange} />
-                    </Col>
-                </Row>
-            </span>
-        );
-    }
-}
-
-class SelectMealForm extends React.Component {
-    render() {
-        const meal = this.props.wizardState.meal;
-        const onChange = this.props.wizardState.onChangeMeal;
-
-        return (
-            <span>
-                <Row>
-                    <Col className="twelve columns">
-                        <ControlLabel>What kind of main course would you like?</ControlLabel>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="one-half column">
-                        <div>
-                            <label>
-                                <input type="radio"
-                                       name="meal"
-                                       value="meat"
-                                       checked={meal === "meat"}
-                                       onChange={onChange} />
-                                Meat
-                            </label>
-                        </div>
-                    </Col>
-                    <Col className="one-half column">
-                        <div>
-                            <label>
-                                <input type="radio"
-                                       name="meal"
-                                       value="vegetarian"
-                                       checked={meal === "vegetarian"}
-                                       onChange={onChange} />
-                                Vegetarian
-                            </label>
-                        </div>
-                    </Col>
-                </Row>
-            </span>
-        );
-    }
-}
-
-// Constants for the wizard direction of movement
-const PREV = -1;
-const NEXT = +1;
-
 /**
- * The main RSVP wizard form implementation.
+ * Implements the RSVP form.
  */
 class RSVPForm extends React.Component {
 
     constructor(props) {
         super(props);
 
-        // The set of wizard forms
-        this.wizardForms = Object.freeze([
-            FindNameForm,
-            PlusOneForm,
-            SelectMealForm,
-        ]);
-
         this.state = {
-            currentPageIdx: 0,
-            wizardState: Object.seal({
+            guestInfo: Object.seal({
                 name: "",
-                guest: "",
                 meal: null,
-
-                onChangeName: this.onChangeWizardState.bind(this, "name"),
-                onChangeGuest: this.onChangeWizardState.bind(this, "guest"),
-                onChangeMeal: this.onChangeWizardState.bind(this, "meal"),
             }),
+            guestPlusOneInfo: null,
+            
+            submitMessage: null,
         };
     }
 
     render() {
-        return (
-            <div>{this.renderCurrentWizardForm()}</div>
-        );
-    }
-
-    /**
-     * Returns a boolean indicating whether the wizard is currently at its first form.
-     */
-    isAtFirstForm() {
-        return this.state.currentPageIdx == 0;
-    }
-
-    /**
-     * Returns a boolean indicating whether the wizard is currently at its last form.
-     */
-    isAtLastForm() {
-        return this.state.currentPageIdx == this.wizardForms.length - 1;
-    }
-
-    /**
-     * Changes the current wizard form to next or previous. If the wizard is at the first form
-     * already, PREV will have no effect and similarly NEXT will have no effect if the wizard is at
-     * the last form.
-     * 
-     * @param direction A value of -1/+1 indicating whether to go to the previous or the next form.
-     *                  Use the PREV or NEXT constants for better readability.
-     */
-    changeForm(direction) {
-        if (direction < 0 && this.isAtFirstForm())
-            return;
-
-        if (direction > 0 && this.isAtLastForm())
-            return;
-
-        var newState = this.state;
-        newState.currentPageIdx += direction;
-        this.setState(newState);
-    }
-
-    /**
-     * Takes the collected wizard input across all forms and submits it to the database.
-     */
-    submitWizard() {
-        alert(JSON.stringify(this.state.wizardState));
-    }
-
-    /**
-     * Callback to be invoked whenever one of the wizard's forms change any of the properties.
-     */
-    onChangeWizardState(prop, e) {
-        const newState = this.state;
-        newState.wizardState[prop] = e.target.value;
-        this.setState(newState);
-    }
-
-    /**
-     * Uses the current state to decide which form from the wizard to render.
-     */
-    renderCurrentWizardForm() {
-        const state = this.state;
-        const wizardState = state.wizardState;
-
-        var visibleForms = [];
-        for (var i = 0; i < state.currentPageIdx + 1; i++) {
-            const WizardForm = this.wizardForms[i];
-            visibleForms.push(
-                <div key={i}>
-                    <WizardForm wizardState={wizardState} />
-                    &nbsp;
-                </div>
-            );
-        }
+        const guestPlusOneInfo = this.state.guestPlusOneInfo;
 
         return (
             <div className="wizard-form">
-                &nbsp;
                 <Grid>
-                    {visibleForms}
+                    {this.renderGuestRSVPForm(this.state.guestInfo)}
                     <Row>
-                        <Col className="one-half column">
+                        <Col className="twelve columns">
                             &nbsp;
-                            {
-                                <button type="button" disabled={this.isAtFirstForm()} onClick={this.changeForm.bind(this, PREV)}>
-                                    &larr;
-                                </button>
-                            }
+                            <div>
+                                <input type="checkbox"
+                                    checked={guestPlusOneInfo !== null}
+                                    onChange={this.onToggleGuestPlusOne.bind(this)} />
+                                Are you bringing a plus one?
+                            </div>
                         </Col>
-                        <Col className="one-half column">
+                    </Row>
+                    {guestPlusOneInfo &&
+                        this.renderGuestRSVPForm(this.state.guestPlusOneInfo)}
+                    <Row>
+                        <Col className="twelve columns">
                             &nbsp;
-                            {this.isAtLastForm() ?
-                                <button type="button" onClick={this.submitWizard.bind(this)}>
-                                    DONE
-                                </button>
-                                :
-                                <button type="button"  onClick={this.changeForm.bind(this, NEXT)}>
-                                    &rarr;
-                                </button>
-                            }
+                            {this.state.submitMessage &&
+                                <div>
+                                    {this.state.submitMessage}
+                                </div>}
+                            &nbsp;
+                            <button onClick={this.submitRSVP.bind(this)}>Submit</button>
                         </Col>
                     </Row>
                 </Grid>
             </div>
         );
+    }
+
+    /**
+     * Invoked when the guest's plus one checkbox is clicked. Shows or hides the guest plus one box.
+     */
+    onToggleGuestPlusOne() {
+        if (this.state.guestPlusOneInfo === null) {
+            this.state.guestPlusOneInfo = Object.seal({
+                name: "",
+                meal: null,
+            });
+        } else {
+            this.state.guestPlusOneInfo = null;
+        }
+
+        this.setState(this.state);
+    }
+
+    /**
+     * Renders the RSVP form for a single guest.
+     */
+    renderGuestRSVPForm(rsvpState) {
+        const self = this;
+        const name = rsvpState.name;
+        const meal = rsvpState.meal;
+
+        // Handles the changes to the guest's name
+        function onChangeName(event) {
+            rsvpState.name = event.target.value;
+            self.setState(self.state);
+        }
+
+        // Handles the changes to the guest's dietary restrictions
+        function onChangeMeal(event) {
+            rsvpState.meal = event.target.value;
+            self.setState(self.state);
+        }
+
+        return (
+            <div className="guest-rsvp">
+                <Row>
+                    <Col className="twelve columns">
+                        <ControlLabel>What is the guest name?</ControlLabel>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="twelve columns">
+                        <input type="text"
+                            value={name}
+                            onChange={onChangeName} />
+                    </Col>
+                </Row>
+                &nbsp;
+                <Row>
+                    <Col className="twelve columns">
+                        <ControlLabel>Any dietary restrictions?</ControlLabel>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="one-half column">
+                        <div>
+                            <input type="radio"
+                                value="vegetarian"
+                                checked={meal === "vegetarian"}
+                                onChange={onChangeMeal} />
+                            Vegetarian
+                        </div>
+                    </Col>
+                    <Col className="one-half column">
+                        <div>
+                            <input type="radio"
+                                value="kosher"
+                                checked={meal === "kosher"}
+                                onChange={onChangeMeal} />
+                            Kosher
+                        </div>
+                    </Col>
+                </Row>
+            </div>
+        );
+    }
+
+    getAPIClient() {
+        return new APIClient(document.location.protocol + '//' + document.location.host + '/api/rsvp');
+    }
+
+    /**
+     * Takes the collected wizard input across all forms and submits it to the database.
+     */
+    submitRSVP() {
+        const self = this;
+        const state = this.state;
+
+        this.getAPIClient().rsvp(state.guestInfo, state.guestPlusOneInfo, function (errorMsg, successMsg) {
+            if (errorMsg) {
+                self.state.submitMessage = errorMsg;
+                self.setState(self.state);
+            } else {
+                self.state.submitMessage = "Yay, we can't wait to see you!";
+                self.setState(self.state);
+            }
+        });
     }
 }
 

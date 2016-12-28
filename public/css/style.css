@@ -236,19 +236,22 @@ nav ul li a.active {
     width: 90%;
 }
 
-.panel-body input {
+.wizard-form input {
+    vertical-align: middle;
+}
+
+.wizard-form input[type='text'] {
     border-radius: 8px;
     border: none;
     box-sizing: border-box;
     font-size: 1.4em;
     margin: 8px 0;
     padding: 12px 20px;
-    vertical-align: middle;
     text-align: center;
     width: 100%;
 }
 
-.panel-body button {
+.wizard-form button {
     background-color: white;
     border-radius: 8px;
     border: none;
@@ -264,7 +267,7 @@ nav ul li a.active {
     transition-duration: 0.3s;
 }
 
-.panel-body button:hover {
+.wizard-form button:hover {
     background-color: #b1bf92;
     color: white;
 }
@@ -273,6 +276,12 @@ nav ul li a.active {
     font-size: 1.4em;
     line-height: 145%;
     padding: 0 20px;
+}
+
+.guest-rsvp {
+    border-style: dashed;
+    border-width: 1px;
+    padding: 10px;
 }
 
 /**
