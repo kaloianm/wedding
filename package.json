@@ -4,7 +4,7 @@
   "description": "Kal & Jocelyn Wedding Website",
   "main": "app.js",
   "scripts": {
-    "install": "mkdir -p public/js && browserify src/main.jsx -o public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
+    "install": "mkdir -p public/js && ./node_modules/.bin/browserify src/main.jsx -o public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
     "start": "node ./app.js"
   },
   "repository": {
