@@ -55,32 +55,22 @@ const websiteContent = (
       <Grid>
         <Row>
           <Col className="one-half column">
-            <h2>JOCELYN</h2>
             <p>
-              <Image className="thumbnail" src="img/jocelyn-baby.jpg" alt="Jocelyn" /> Jocelyn is hot and shit. This is some long
-              paragraph to test the image around text wrapping.
+              <Image className="thumbnail" src="img/jocelyn-baby.jpg" alt="Jocelyn" /> Jocelyn is a lovely uncomplicated girl who was
+              born and raised in New York. As exciting as New York was for an impressionable young girl she made it her mission to live
+              &amp; explore as many beautiful cities as she could. Thanks to her beloved sister Wendy it was possible to jump from the
+              neon nights of Miami, to the multi diverse city of London, to then learn the leisure ways of Italy. While Jocelyn was
+              exploring and realizing her passion in life she realized she needed to find her way back to the city she knew her dream
+              job was waiting for her in Fashion.
             </p>
           </Col>
 
           <Col className="one-half column">
-            <h2>KAL</h2>
             <p>
-              <Image className="thumbnail" src="img/kal-baby.jpg" alt="Kal" /> Kal is not too shabby too. This is some long paragraph
-              to test the image around text wrapping.
-            </p>
-          </Col>
-        </Row>
-      </Grid>
-
-      <hr />
-
-      <Grid>
-        <Row>
-          <Col className="twelve columns">
-            <h2>HOW WE MET</h2>
-            <p>
-              Being children of the modern day and age we met on OK cupid. This is some long paragraph to test the alignment with
-              the image and the flow of the text around it.
+              <Image className="thumbnail" src="img/kal-baby.jpg" alt="Kal" /> Kal is a burly Eastern European who moved from his
+              homeland Bulgaria at the young age of 22 to the lovely city of Toronto. Kal then found himself in the IT mecca of
+              Seattle and realized after 9 years of the beautiful mountain backdrop and serene lakes that he needs to escape to the
+              center of the universe, New York.
             </p>
           </Col>
         </Row>
@@ -95,8 +85,14 @@ const websiteContent = (
               <Image className="proposal-image" src="img/proposal.jpg" alt="Kal Proposing To Jocelyn" />
             </p>
 
-            <h2>THE ENGAGEMENT</h2>
-            <p>In Cannes and shit ...</p>
+            <h2>OUR STORY</h2>
+            <p>
+              Being children of the modern day and age, our story began with venturing onto OKCupid. As hesitant as one of
+              us was to engage herself with a complete stranger online (while the other happily explored with enthusiasm) it
+              soon became apparent the first date we met the natural occurrences when 2 people meet and all feelings of the
+              unknown disappeared because at that moment right in front of me I was meeting my best friend. As the cliche tale
+              goes, the rest is history.
+            </p>
           </Col>
         </Row>
       </Grid>
@@ -107,23 +103,25 @@ const websiteContent = (
         <Row>
           <Col className="one-half column">
             <h2>CEREMONY</h2>
-            <p>15:00 @ Sveti Marak Church Courtyard</p>
+            <p>16:00 @ Sveti Marak (St Mark&#39;s) Church Courtyard</p>
             <p>
               <Image className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak" />
             </p>
             <p>
-              <a href="https://goo.gl/tGGyYy">Google Maps</a> | <a href="https://goo.gl/tGGyYy">Tourist Map</a>
+              <a href="https://goo.gl/maps/BvKtzdCKGDm" target="_blank">Google Maps</a> | 
+              <a href="img/city-hvar-map.jpg" target="_blank">Tourist Map</a>
             </p>
           </Col>
 
           <Col className="one-half column">
             <h2>RECEPTION</h2>
-            <p>16:00 @ Bonj les Bains Beach Club</p>
+            <p>17:00 @ Bonj les Bains Beach Club</p>
             <p>
               <Image className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" />
             </p>
             <p>
-              <a href="https://goo.gl/tGGyYy">Google Maps</a> | <a href="https://goo.gl/tGGyYy">Tourist Map</a>
+              <a href="https://goo.gl/maps/MGBa94iBaA42" target="_blank">Google Maps</a> | 
+              <a href="img/city-hvar-map.jpg" target="_blank">Tourist Map</a>
             </p>
           </Col>
         </Row>
