@@ -105,23 +105,21 @@ const websiteContent = (
             <h2>CEREMONY</h2>
             <p>16:00 @ Sveti Marak (St Mark&#39;s) Church Courtyard</p>
             <p>
-              <Image className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak" />
+              <Image className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" />
             </p>
             <p>
-              <a href="https://goo.gl/maps/BvKtzdCKGDm" target="_blank">Google Maps</a> | 
-              <a href="img/city-hvar-map.jpg" target="_blank">Tourist Map</a>
+              <a href="https://goo.gl/maps/BvKtzdCKGDm" target="_blank">Google Maps</a> | <a href="img/city-hvar-map.jpg" target="_blank">Tourist Map</a>
             </p>
           </Col>
 
           <Col className="one-half column">
             <h2>RECEPTION</h2>
-            <p>17:00 @ Bonj les Bains Beach Club</p>
+            <p>17:00 @ Bonj les Bains Beach Club (Colonnade restaurant)</p>
             <p>
               <Image className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" />
             </p>
             <p>
-              <a href="https://goo.gl/maps/MGBa94iBaA42" target="_blank">Google Maps</a> | 
-              <a href="img/city-hvar-map.jpg" target="_blank">Tourist Map</a>
+              <a href="https://goo.gl/maps/MGBa94iBaA42" target="_blank">Google Maps</a> | <a href="img/city-hvar-map.jpg" target="_blank">Tourist Map</a>
             </p>
           </Col>
         </Row>

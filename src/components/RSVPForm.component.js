@@ -5,11 +5,7 @@
 'use strict';
 
 import APIClient from '../api/api-client';
-import Col from 'react-bootstrap/lib/Col';
-import ControlLabel from 'react-bootstrap/lib/ControlLabel';
-import Grid from 'react-bootstrap/lib/Grid';
 import React from 'react';
-import Row from 'react-bootstrap/lib/Row';
 
 /**
  * Implements the RSVP form.
@@ -33,11 +29,10 @@ class RSVPForm extends React.Component {
 
         return (
             <div className="wizard-form">
-                <div>
-                    Please complete the form below to let us know if you will be joining us in Hvar.
-                    <br />
-                    Fields marked with * are mandatory.
-                </div>
+                Please complete the form below to let us know if you will be joining us in Hvar.
+                <br />
+                Fields marked with * are mandatory.
+                <br />
                 {this.renderTextInput('name', 'Name:', guestInfo)}
                 {this.renderTextInput('email', 'Email:', guestInfo)}
                 <br />
@@ -120,19 +115,11 @@ class RSVPForm extends React.Component {
 
         return (
             <div className="rsvp-section">
-                <Row>
-                    <Col className="twelve columns">
-                        <ControlLabel>{label}</ControlLabel>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="twelve columns">
-                        <input type="text"
-                            name={name}
-                            value={value}
-                            onChange={onChange} />
-                    </Col>
-                </Row>
+                <label>{label}</label>
+                <input type="text"
+                    name={name}
+                    value={value}
+                    onChange={onChange} />
             </div>
         );
     }
@@ -156,28 +143,20 @@ class RSVPForm extends React.Component {
 
         return (
             <div className="rsvp-section">
-                <Row>
-                    <Col className="twelve columns">
-                        <ControlLabel>{label}</ControlLabel>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col className="twelve columns">
-                        {
-                            options.map(function (option) {
-                                return (
-                                    <div key={option.value}>
-                                        <input type="radio"
-                                            value={option.value}
-                                            checked={value === option.value}
-                                            onChange={onChange} />
-                                        {option.label}
-                                    </div>
-                                );
-                            })
-                        }
-                    </Col>
-                </Row>
+                <label>{label}</label>
+                {
+                    options.map(function (option) {
+                        return (
+                            <div key={option.value}>
+                                <input type="radio"
+                                    value={option.value}
+                                    checked={value === option.value}
+                                    onChange={onChange} />
+                                {option.label}
+                            </div>
+                        );
+                    })
+                }
             </div>
         );
     }
