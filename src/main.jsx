@@ -41,7 +41,7 @@ const websiteContent = (
 
     <div style={styles.whiteSpace}></div>
 
-    <Sticky enabled={true} top={25}>
+    <Sticky enabled={true}>
       <Menu id="menu"
             items={[{ label: 'THE BRIDE & GROOM', href: 'brideandgroom' },
                     { label: 'THE WEDDING', href: 'wedding' },
@@ -131,23 +131,24 @@ const websiteContent = (
 
       <Grid>
         <Row>
-          <h2>BRIDAL PARTY</h2>
+          <h2>ON THE WEDDING DAY</h2>
           <Col className="twelve columns">
-            <h2>Bridesmaids </h2>
-            <div>
               <p>
                 Coming Soon!<br />
               </p>
-            </div>
           </Col>
+        </Row>
+      </Grid>
 
+      <hr />
+
+      <Grid>
+        <Row>
+          <h2>BEFORE &amp; AFTER</h2>
           <Col className="twelve columns">
-            <h2>Groomsmen</h2>
-            <div>
               <p>
-                Coming Soon!<br />
+                Coming soon, but be prepared for a cocktail evening out on the day before and a hangover brunch on the day after :)<br />
               </p>
-            </div>
           </Col>
         </Row>
       </Grid>

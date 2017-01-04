@@ -214,13 +214,12 @@ nav ul li a.active {
 .page-header h1 {
     font-family: "EdwardianScrAltITCTT", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 6em;
-    padding: 0 20px;
 }
 
 .panel-body h2 {
     font-size: 1.7em;
     line-height: 120%;
-    padding: 0 20px;
+    padding: 15px 20px;
 }
 
 .panel-body p {
@@ -491,6 +490,6 @@ nav ul li a.active {
     }
 
     .panel-body p {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 }
