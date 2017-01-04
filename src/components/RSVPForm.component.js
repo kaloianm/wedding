@@ -20,126 +20,162 @@ class RSVPForm extends React.Component {
         super(props);
 
         this.state = {
-            guestInfo: Object.seal({
-                name: "",
-                meal: null,
-            }),
-            guestPlusOneInfo: null,
-            
+            guestInfo: {},
+            guestPlusOneInfo: {},
+
             submitMessage: null,
         };
     }
 
     render() {
+        const guestInfo = this.state.guestInfo;
         const guestPlusOneInfo = this.state.guestPlusOneInfo;
 
         return (
             <div className="wizard-form">
-                <Grid>
-                    {this.renderGuestRSVPForm(this.state.guestInfo)}
-                    <Row>
-                        <Col className="twelve columns">
-                            &nbsp;
-                            <div>
-                                <input type="checkbox"
-                                    checked={guestPlusOneInfo !== null}
-                                    onChange={this.onToggleGuestPlusOne.bind(this)} />
-                                Are you bringing a plus one?
-                            </div>
-                        </Col>
-                    </Row>
-                    {guestPlusOneInfo &&
-                        this.renderGuestRSVPForm(this.state.guestPlusOneInfo)}
-                    <Row>
-                        <Col className="twelve columns">
-                            &nbsp;
-                            {this.state.submitMessage &&
-                                <div>
-                                    {this.state.submitMessage}
-                                </div>}
-                            &nbsp;
-                            <button onClick={this.submitRSVP.bind(this)}>Submit</button>
-                        </Col>
-                    </Row>
-                </Grid>
+                <div>
+                    Please complete the form below to let us know if you will be joining us in Hvar.
+                    <br />
+                    Fields marked with * are mandatory.
+                </div>
+                {this.renderTextInput('name', 'Name:', guestInfo)}
+                {this.renderTextInput('email', 'Email:', guestInfo)}
+                <br />
+                {this.renderRadioInput(
+                    'attendance',
+                    'Attendance:',
+                    [
+                        { label: 'I WILL BE ATTENDING', value: 'yes' },
+                        { label: 'I WILL NOT BE ATTENDING', value: 'no' }
+                    ],
+                    guestInfo)
+                }
+                <br />
+                {guestInfo.attendance === 'yes' &&
+                    <div>
+                        {this.renderRadioInput(
+                            'meal',
+                            'Entreé preference:',
+                            [
+                                { label: 'I EAT MEAT', value: 'meat' },
+                                { label: 'I DO NOT EAT MEAT', value: 'vegetarian' }
+                            ],
+                            guestInfo)}
+                        <br />
+                        {this.renderTextInput(
+                            'dietaryRestrictions',
+                            'Other dietary restrictions?',
+                            guestInfo)}
+                        <br />
+                        {this.renderRadioInput(
+                            'attendance',
+                            'Attendance:',
+                            [
+                                { label: 'I WILL BE BRINGING A PLUS ONE', value: 'yes' },
+                                { label: 'I WILL NOT BE BRINGING A PLUS ONE', value: 'no' }
+                            ],
+                            guestPlusOneInfo)}
+                    </div>
+                }
+                <br />
+                {guestPlusOneInfo.attendance === 'yes' &&
+                    <div>
+                        {this.renderTextInput('name', 'Name:', guestPlusOneInfo)}
+                        <br />
+                        {this.renderRadioInput(
+                            'meal',
+                            'Entreé preference:',
+                            [
+                                { label: 'I EAT MEAT', value: 'meat' },
+                                { label: 'I DO NOT EAT MEAT', value: 'vegetarian' }
+                            ],
+                            guestPlusOneInfo)}
+                        <br />
+                        {this.renderTextInput(
+                            'dietaryRestrictions',
+                            'Other dietary restrictions?',
+                            guestPlusOneInfo)}
+                    </div>
+                }
+                <div>
+                    {this.state.submitMessage && this.state.submitMessage}
+                    <br />
+                    <button onClick={this.submitRSVP.bind(this)}>Submit</button>
+                </div>
             </div>
         );
     }
 
     /**
-     * Invoked when the guest's plus one checkbox is clicked. Shows or hides the guest plus one box.
+     * Renders a text input with a label. Gets its state and updates the specified @stateObj.
      */
-    onToggleGuestPlusOne() {
-        if (this.state.guestPlusOneInfo === null) {
-            this.state.guestPlusOneInfo = Object.seal({
-                name: "",
-                meal: null,
-            });
-        } else {
-            this.state.guestPlusOneInfo = null;
-        }
-
-        this.setState(this.state);
-    }
-
-    /**
-     * Renders the RSVP form for a single guest.
-     */
-    renderGuestRSVPForm(rsvpState) {
+    renderTextInput(name, label, stateObj) {
         const self = this;
-        const name = rsvpState.name;
-        const meal = rsvpState.meal;
+        const value = stateObj[name];
 
-        // Handles the changes to the guest's name
-        function onChangeName(event) {
-            rsvpState.name = event.target.value;
-            self.setState(self.state);
-        }
-
-        // Handles the changes to the guest's dietary restrictions
-        function onChangeMeal(event) {
-            rsvpState.meal = event.target.value;
+        function onChange(event) {
+            stateObj[name] = event.target.value;
             self.setState(self.state);
         }
 
         return (
-            <div className="guest-rsvp">
+            <div className="rsvp-section">
                 <Row>
                     <Col className="twelve columns">
-                        <ControlLabel>What is the guest name?</ControlLabel>
+                        <ControlLabel>{label}</ControlLabel>
                     </Col>
                 </Row>
                 <Row>
                     <Col className="twelve columns">
                         <input type="text"
-                            value={name}
-                            onChange={onChangeName} />
+                            name={name}
+                            value={value}
+                            onChange={onChange} />
                     </Col>
                 </Row>
-                &nbsp;
+            </div>
+        );
+    }
+
+    /**
+     * Renders a text input with a label and the specified set of options. Gets its state and
+     * updates the specified @stateObj.
+     * 
+     * The format of the options is an array of JSON objects with the following properties:
+     *  label - Label of the option
+     *  value - Value of the option to be set on the @stateObj
+     */
+    renderRadioInput(name, label, options, stateObj) {
+        const self = this;
+        const value = stateObj[name];
+
+        function onChange(event) {
+            stateObj[name] = event.target.value;
+            self.setState(self.state);
+        }
+
+        return (
+            <div className="rsvp-section">
                 <Row>
                     <Col className="twelve columns">
-                        <ControlLabel>Any dietary restrictions?</ControlLabel>
+                        <ControlLabel>{label}</ControlLabel>
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="one-half column">
-                        <div>
-                            <input type="radio"
-                                value="vegetarian"
-                                checked={meal === "vegetarian"}
-                                onChange={onChangeMeal} />
-                            Vegetarian
-                        </div>
-                    </Col>
-                    <Col className="one-half column">
-                        <div>
-                            <input type="radio"
-                                value="kosher"
-                                checked={meal === "kosher"}
-                                onChange={onChangeMeal} />
-                            Kosher
-                        </div>
+                    <Col className="twelve columns">
+                        {
+                            options.map(function (option) {
+                                return (
+                                    <div key={option.value}>
+                                        <input type="radio"
+                                            value={option.value}
+                                            checked={value === option.value}
+                                            onChange={onChange} />
+                                        {option.label}
+                                    </div>
+                                );
+                            })
+                        }
                     </Col>
                 </Row>
             </div>

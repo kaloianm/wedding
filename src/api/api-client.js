@@ -32,6 +32,8 @@ class APIClient {
             requestBody.guestPlusOne = guestPlusOne;
         }
 
+        console.log(JSON.stringify(requestBody));
+
         fetch(this._apiUrl, { method: 'POST',  body: requestBody })
             .catch(function (err) {
                 callbackFn('Boo, looks like your internizzle is acting up :( Call us?');
