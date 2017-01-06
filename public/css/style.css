@@ -43,6 +43,15 @@ body {
     text-align: center;
 }
 
+.main-container {
+    background-attachment: fixed;
+    background-image: url('/img/bgimage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
 textarea {
     color: #222;
     resize: vertical;
@@ -444,6 +453,10 @@ nav ul li a.active {
 }
 
 @media only screen and (max-width: 750px) {
+    .main-container {
+        background-image: url('/img/bgimage-small.jpg');
+    }
+
     .bride-name {
         font-size: 6.6em;
     }
@@ -468,6 +481,10 @@ nav ul li a.active {
 }
 
 @media only screen and (max-width: 600px) {
+    section {
+        padding: 10px 10px 30px 10px;
+    }
+
     .bride-name {
         font-size: 3.3em;
     }

@@ -18,21 +18,13 @@ import TitleBar from './components/TitleBar.component';
 import TopicContainer from './components/TopicContainer.component';
 
 const styles = {
-    backgroundImage: {
-        backgroundImage: 'url(img/bgimage0.jpg)',
-        height: '100%',
-        backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-    },
     whiteSpace: {
         height: '200px',
     },
 };
 
 const websiteContent = (
-  <div style={styles.backgroundImage}>
+  <div className="main-container">
 
     <div style={styles.whiteSpace}></div>
 
