@@ -102,6 +102,34 @@ class RSVPForm extends React.Component {
     }
 
     /**
+     * Validates that the form can be submitted and returns null on success or a string message with
+     * the validation error otherwise.
+     */
+    validate() {
+        function validateGuest(info) {
+            if (!info.name || info.name.trim().empty)
+                return 'Name cannot be left empty';
+            if (!info.attendance)
+                return 'Please specify whether you will be joining us';
+            if (info.attendance === 'yes' && !info.meal)
+                return 'Type of meal must be selected';
+            return null;
+        }
+
+        const guestInfo = this.state.guestInfo;
+        if (validateGuest(guestInfo))
+            return validateGuest(guestInfo);
+
+        const guestPlusOneInfo = this.state.guestPlusOneInfo;
+        if (guestPlusOneInfo.attendance === 'yes') {
+            if (validateGuest(guestPlusOneInfo))
+                return validateGuest(guestPlusOneInfo);
+        }
+
+        return null;
+    }
+
+    /**
      * Renders a text input with a label. Gets its state and updates the specified @stateObj.
      */
     renderTextInput(name, label, stateObj) {
@@ -161,6 +189,9 @@ class RSVPForm extends React.Component {
         );
     }
 
+    /**
+     * Retrieves the client for the web service API.
+     */
     getAPIClient() {
         return new APIClient(document.location.protocol + '//' + document.location.host + '/api/rsvp');
     }
@@ -172,12 +203,33 @@ class RSVPForm extends React.Component {
         const self = this;
         const state = this.state;
 
-        this.getAPIClient().rsvp(state.guestInfo, state.guestPlusOneInfo, function (errorMsg, successMsg) {
+        if (this.validate()) {
+            self.state.submitMessage = this.validate();
+            self.setState(self.state);
+            return;
+        }
+
+        var guestInfo = Object.assign({}, state.guestInfo);
+        var guestPlusOneInfo = Object.assign({}, state.guestPlusOneInfo);
+
+        // TODO: This is a hack, find a way to properly construct the request
+        const willAttend = guestInfo.attendance === 'yes';
+        delete guestInfo['attendance'];
+
+        if (guestPlusOneInfo.attendance === 'yes') {
+            delete guestPlusOneInfo['attendance'];
+        }
+        else {
+            guestPlusOneInfo = undefined;
+        }
+
+        this.getAPIClient().rsvp(guestInfo, willAttend, guestPlusOneInfo, function (errorMsg, successMsg) {
             if (errorMsg) {
                 self.state.submitMessage = errorMsg;
                 self.setState(self.state);
             } else {
-                self.state.submitMessage = "Yay, we can't wait to see you!";
+                self.state.submitMessage = willAttend ? "Yay, we can't wait to see you!" :
+                    "Oh no! We are sad we don't get to celebrate with you :(";
                 self.setState(self.state);
             }
         });
