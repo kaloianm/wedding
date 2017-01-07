@@ -7,8 +7,6 @@
 
 'use strict';
 
-import PageHeader from 'react-bootstrap/lib/PageHeader';
-import Panel from 'react-bootstrap/lib/Panel';
 import React from 'react';
 
 class TopicContainer extends React.Component {
@@ -19,14 +17,11 @@ class TopicContainer extends React.Component {
 
     render() {
         return (
-            <div>
-                <div id={this.props.id} className="section-wrapper">
-                    &nbsp;
-                    <section>
-                        <PageHeader>{this.props.title}</PageHeader>
-                        <Panel>{this.props.children}</Panel>
-                    </section>
-                </div>
+            <div id={this.props.id} className="topic-wrapper">
+                <section>
+                    <h1>{this.props.title}</h1>
+                    <div>{this.props.children}</div>
+                </section>
             </div>
         );
     }

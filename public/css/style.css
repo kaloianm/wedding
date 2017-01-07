@@ -25,36 +25,27 @@
 }
 
 /**
- * Common element configuration
+ * Common elements
  */
 
 * { 
+    border: 0;
     margin: 0;
     padding: 0;
     font-weight: normal;
 }
 
 body {
-    background-position: 50% 20%;
-    color: #fff;
-    font-size: 1em;
-    font-family: "FuturaLTBook", Arial, sans-serif;
-    line-height: 1.4;
-    text-align: center;
-}
-
-.main-container {
     background-attachment: fixed;
     background-image: url('/img/bgimage.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-}
-
-textarea {
-    color: #222;
-    resize: vertical;
+    color: #fff;
+    font-family: "FuturaLTBook", Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: center;
 }
 
 a {
@@ -62,7 +53,132 @@ a {
     text-decoration: none;
 }
 
-section {
+h1 {
+    font-family: "EdwardianScrAltITCTT", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 6em;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.7em;
+    padding-bottom: 15px;
+}
+
+p {
+    font-size: 1.4em;
+    padding-bottom: 6px;
+}
+
+hr {
+    border-bottom:#808080 solid 1px;
+    border-top:#1e1e1e solid 1px;
+    margin: 60px auto 60px auto;
+    width: 90%;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+#content {
+    padding: 200px 0 300px 0;
+}
+
+/**
+ * Title bar
+ */
+
+.titlebar {
+    background-color: black;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    padding: 10px 0 10px 0;
+}
+
+.titlebar .bride-name {
+    font-family: 'EdwardianScrAltITCTT';
+    font-size: 11em;
+    line-height: 100%;
+}
+
+.titlebar .groom-name {
+    font-family: 'FuturaLTBook';
+    font-size: 5em;
+    line-height: 100%;
+}
+
+.titlebar .wedding-date {
+    font-family: 'FuturaLTBook';
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+/**
+ * Menu
+ */
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    font-family: "FuturaLTBook", Arial, sans-serif;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+nav ul li a {
+    color: white;
+    display: block;
+    padding: 15px 40px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #b1bf92;
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    background: #b1bf92;
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+
+/**
+ * Topic container
+ */
+
+.topic-wrapper {
+    margin: auto;
+    padding-top: 200px;
+    width: 80%;
+}
+
+.topic-wrapper section {
     background-color: black;
     background: rgba(0, 0, 0, 0.7);
     color: white;
@@ -76,21 +192,83 @@ section {
     border-radius: 8px;
 }
 
-.section-wrapper {
-    height: 100%;
-    margin: 200px auto 200px auto;
-    width: 80%;
+/**
+ * Wizard form
+ */
+
+.wizard-form input {
+    vertical-align: middle;
 }
 
-.titlebar {
-    background-color: black;
-    background: rgba(0, 0, 0, 0.4);
+.wizard-form input[type='text'] {
     border-radius: 8px;
-    display: block;
-    margin: auto;
-    width: 70%;
-    padding: 10px 0 10px 0;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1.4em;
+    margin: 8px 0;
+    padding: 12px 20px;
+    text-align: center;
+    width: 100%;
 }
+
+.wizard-form button {
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+.wizard-form button:hover {
+    background-color: #b1bf92;
+    color: white;
+}
+
+/**
+ * Google Maps
+ */
+
+#gmap {
+    text-align: center;
+    margin: 20px auto 20px auto;
+}
+
+#gmap iframe {
+    border: 10px solid #090909;
+    height: 400px;
+
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#gmap small a,
+#gmap small a:active,
+#gmap small a:visited {
+    color: #b1bf92;
+    outline: none;
+    text-decoration: none;
+}
+
+#gmap small a:hover {
+    color: #b1bf92;
+    outline: none;
+    text-decoration: underline;
+}
+
+/**
+ * Misc
+ */
 
 img.thumbnail {
     background-color: black;
@@ -139,193 +317,8 @@ img.location-image {
     border-radius: 8px;
 }
 
-.bride-name {
-    font-family: 'EdwardianScrAltITCTT';
-    font-size: 11em;
-    line-height: 100%;
-}
-
-.groom-name {
-    font-family: 'FuturaLTBook';
-    font-size: 5em;
-    line-height: 100%;
-}
-
-.wedding-date {
-    font-family: 'FuturaLTBook';
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    margin-top: 15px;
-}
-
-/**
- * Menu configuration
- */
-
-nav {
-    background-color: #333;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    text-align: center;
-    font-size: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    font-family: "FuturaLTBook", Arial, sans-serif;
-    font-size: 16px;
-    padding-left: 10px;
-}
-
-nav ul li a {
-    color: white;
-    display: block;
-    padding: 15px 40px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background: #b1bf92;
-    color: #fff;
-    outline: none;
-    text-decoration: none;
-}
-
-nav ul li a.active {
-    background: #b1bf92;
-    color: #fff;
-    outline: none;
-    text-decoration: none;
-}
-
-/**
- * Higlighted text colour
- */
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/**
- * Topic container configuration
- */
-
-.page-header h1 {
-    font-family: "EdwardianScrAltITCTT", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 6em;
-}
-
-.panel-body h2 {
-    font-size: 1.7em;
-    line-height: 120%;
-    padding: 15px 20px;
-}
-
-.panel-body p {
-    font-size: 1.4em;
-    line-height: 145%;
-    padding: 5px 20px;
-}
-
-.panel-body hr {
-    border-bottom:#808080 solid 1px;
-    border-top:#1e1e1e solid 1px;
-    margin: 60px auto 60px auto;
-    width: 90%;
-}
-
-.wizard-form input {
-    vertical-align: middle;
-}
-
-.wizard-form input[type='text'] {
-    border-radius: 8px;
-    border: none;
-    box-sizing: border-box;
-    font-size: 1.4em;
-    margin: 8px 0;
-    padding: 12px 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.wizard-form button {
-    background-color: white;
-    border-radius: 8px;
-    border: none;
-    color: black;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-
-    -webkit-transition-duration: 0.3s; /* Safari */
-    transition-duration: 0.3s;
-}
-
-.wizard-form button:hover {
-    background-color: #b1bf92;
-    color: white;
-}
-
-.wizard-form {
-    font-size: 1.4em;
-    line-height: 145%;
-    padding: 0 20px;
-}
-
-.guest-rsvp {
-    border-style: dashed;
-    border-width: 1px;
-    padding: 10px;
-}
-
-/**
- * Google Maps configuration
- */
-
-#gmap {
-    text-align: center;
-    margin: 20px auto 20px auto;
-}
-
-#gmap iframe {
-    border: 10px solid #090909;
-    height: 400px;
-    width: 93%;
-
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-}
-
-#gmap small a,
-#gmap small a:active,
-#gmap small a:visited {
-    color: #b1bf92;
-    outline: none;
-    text-decoration: none;
-}
-
-#gmap small a:hover {
-    color: #b1bf92;
-    outline: none;
-    text-decoration: underline;
+.credits {
+    font-size: 0.5em;
 }
 
 /**
@@ -426,22 +419,22 @@ nav ul li a.active {
  */
 
 @media only screen and (max-width: 1000px) {
-    .bride-name {
+    h1 {
+        font-size: 4.8em;
+    }
+
+    .titlebar .bride-name {
         font-size: 8.8em;
     }
 
-    .groom-name {
+    .titlebar .groom-name {
         font-family: 'FuturaLTBook';
         font-size: 4em;
     }
 
-    .wedding-date {
+    .titlebar .wedding-date {
         font-family: 'FuturaLTBook';
         font-size: 2.5em;
-    }
-
-    .page-header h1 {
-        font-size: 4.8em;
     }
 }
 
@@ -453,61 +446,61 @@ nav ul li a.active {
 }
 
 @media only screen and (max-width: 750px) {
-    .main-container {
+    body {
         background-image: url('/img/bgimage-small.jpg');
     }
 
-    .bride-name {
+    h1 {
+        font-size: 3.6em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .titlebar .bride-name {
         font-size: 6.6em;
     }
 
-    .groom-name {
+    .titlebar .groom-name {
         font-family: 'FuturaLTBook';
         font-size: 3em;
     }
 
-    .wedding-date {
+    .titlebar .wedding-date {
         font-family: 'FuturaLTBook';
         font-size: 1.7em;
-    }
-
-    .page-header h1 {
-        font-size: 3.6em;
-    }
-
-    .panel-body h2 {
-        font-size: 1.2em;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    section {
-        padding: 10px 10px 30px 10px;
+    h1 {
+        font-size: 2em;
     }
 
-    .bride-name {
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .titlebar .bride-name {
         font-size: 3.3em;
     }
 
-    .groom-name {
+    .titlebar .groom-name {
         font-family: 'FuturaLTBook';
         font-size: 1.5em;
     }
 
-    .wedding-date {
+    .titlebar .wedding-date {
         font-family: 'FuturaLTBook';
         font-size: 1.2em;
     }
 
-    .page-header h1 {
-        font-size: 2em;
-    }
-
-    .panel-body h2 {
-        font-size: 1em;
-    }
-
-    .panel-body p {
-        font-size: 0.8em;
+    .topic-wrapper section {
+        padding: 10px 10px 30px 10px;
     }
 }

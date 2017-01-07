@@ -14,17 +14,13 @@ class TitleBar extends React.Component {
 
     render() {
         return (
-            <div>
-                <header>
-                    <div className="titlebar">
-                        <span className="bride-name">Jocelyn</span>
-                        <span className="groom-name">&nbsp;
-                            <span>&amp;</span> Kal
-                        </span>
-                        <div className="wedding-date">31<sup>st</sup> AUGUST, 2017</div>
-                    </div>
-                </header>
-            </div>
+            <header className="titlebar">
+                <span className="bride-name">Jocelyn</span>
+                <span className="groom-name">&nbsp;
+                    <span>&amp;</span> Kal
+                </span>
+                <div className="wedding-date">31<sup>st</sup> AUGUST, 2017</div>
+            </header>
         );
     }
 }

@@ -24,9 +24,7 @@ const styles = {
 };
 
 const websiteContent = (
-  <div className="main-container">
-
-    <div style={styles.whiteSpace}></div>
+  <div>
 
     <TitleBar id="titlebar">
     </TitleBar>
@@ -193,14 +191,6 @@ const websiteContent = (
       <p>Thank you in advance!
       </p>
     </TopicContainer>
-
-    <div style={styles.whiteSpace}></div>
-
-    <div>
-        Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from 
-        <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by 
-        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"> CC 3.0 BY</a>
-    </div>
 
   </div>
 );      

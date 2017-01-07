@@ -31,16 +31,20 @@ class RSVPForm extends React.Component {
 
         return (
             <div className="wizard-form">
-                Please complete the form below to let us know if you will be joining us in Hvar.
+                <p>
+                    Please complete the form below to let us know if you will be joining us in Hvar.
+                </p>
                 <br />
-                Fields marked with * are mandatory.
+                <p>
+                    Fields marked with * are mandatory.
+                </p>
                 <br />
-                {this.renderTextInput('name', 'Name:', guestInfo)}
+                {this.renderTextInput('name', 'Name*:', guestInfo)}
                 {this.renderTextInput('email', 'Email:', guestInfo)}
                 <br />
                 {this.renderRadioInput(
                     'attendance',
-                    'Attendance:',
+                    'Attendance*:',
                     [
                         { label: 'I WILL BE ATTENDING', value: 'yes' },
                         { label: 'I WILL NOT BE ATTENDING', value: 'no' }
@@ -52,7 +56,7 @@ class RSVPForm extends React.Component {
                     <div>
                         {this.renderRadioInput(
                             'meal',
-                            'Entreé preference:',
+                            'Entreé preference*:',
                             [
                                 { label: 'I EAT MEAT', value: 'meat' },
                                 { label: 'I DO NOT EAT MEAT', value: 'vegetarian' }
@@ -66,7 +70,7 @@ class RSVPForm extends React.Component {
                         <br />
                         {this.renderRadioInput(
                             'attendance',
-                            'Attendance:',
+                            'Attendance*:',
                             [
                                 { label: 'I WILL BE BRINGING A PLUS ONE', value: 'yes' },
                                 { label: 'I WILL NOT BE BRINGING A PLUS ONE', value: 'no' }
@@ -81,7 +85,7 @@ class RSVPForm extends React.Component {
                         <br />
                         {this.renderRadioInput(
                             'meal',
-                            'Entreé preference:',
+                            'Entreé preference*:',
                             [
                                 { label: 'I EAT MEAT', value: 'meat' },
                                 { label: 'I DO NOT EAT MEAT', value: 'vegetarian' }
@@ -182,7 +186,7 @@ class RSVPForm extends React.Component {
                                     value={option.value}
                                     checked={value === option.value}
                                     onChange={onChange} />
-                                {option.label}
+                                <label>{option.label}</label>
                             </div>
                         );
                     })
