@@ -24,7 +24,7 @@ mongoose.connect(mongodbUri, function (err, res) {
 const guestSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: String,
-    meal: { type: String, required: true },
+    meal: String,
     dietaryRestrictions: String,
 });
 

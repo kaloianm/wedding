@@ -7,6 +7,8 @@
 import APIClient from '../api/api-client';
 import React from 'react';
 
+require('es6-object-assign').polyfill();
+
 /**
  * Implements the RSVP form.
  */
