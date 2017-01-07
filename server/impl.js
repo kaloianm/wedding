@@ -13,6 +13,9 @@ import winston from 'winston';
 // Setup mongodb connection and schema
 const mongodbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/jociandkalwedding';
 
+// Avoid mongoose Promise deprecation warning
+mongoose.Promise = global.Promise
+
 mongoose.connect(mongodbUri, function (err, res) {
     if (err) {
         winston.log('error', 'Failed to connect to mongodb', mongodbUri, err);

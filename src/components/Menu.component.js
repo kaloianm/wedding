@@ -23,8 +23,8 @@ class Menu extends React.Component {
         var key = 0;
 
         return (
-            <nav id={this.props.id}>
-                <ul className="nav">
+            <nav id={this.props.id} className="menu">
+                <ul>
                     {
                         this.props.items.map(function (element) {
                             key++;

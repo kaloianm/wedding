@@ -1,8 +1,9 @@
 /**
  * Implements a topic box. Accepts the following properties:
  *
- * title (string): Title for the topic
- * content (string): The content of the topic
+ * id (string): Identifier for the element
+ * title (string): Title of the topic
+ * children: The content of the topic
  */
 
 'use strict';

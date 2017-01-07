@@ -1,12 +1,16 @@
 /**
  * Implements the reservation form wizard and interaction with the server.
+ * 
+ * id (string): Identifier for the element
  */
 
 'use strict';
 
 import APIClient from '../api/api-client';
+import isEmail from 'validator/lib/isEmail';
 import React from 'react';
 
+// For compatibility with older Internet Explorer browsers
 require('es6-object-assign').polyfill();
 
 /**
@@ -30,7 +34,7 @@ class RSVPForm extends React.Component {
         const guestPlusOneInfo = this.state.guestPlusOneInfo;
 
         return (
-            <div className="wizard-form">
+            <div id={this.props.id} className="wizard-form">
                 <p>
                     Please complete the form below to let us know if you will be joining us in Hvar.
                 </p>
@@ -79,7 +83,7 @@ class RSVPForm extends React.Component {
                     </div>
                 }
                 <br />
-                {guestPlusOneInfo.attendance === 'yes' &&
+                {guestInfo.attendance === 'yes' && guestPlusOneInfo.attendance === 'yes' &&
                     <div>
                         {this.renderTextInput('name', 'Name:', guestPlusOneInfo)}
                         <br />
@@ -115,6 +119,8 @@ class RSVPForm extends React.Component {
         function validateGuest(info) {
             if (!info.name || info.name.trim().empty)
                 return 'Name cannot be left empty';
+            if (info.email && !isEmail(info.email))
+                return 'Email format is not valid'
             if (!info.attendance)
                 return 'Please specify whether you will be joining us';
             if (info.attendance === 'yes' && !info.meal)

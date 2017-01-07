@@ -127,41 +127,41 @@ hr {
  * Menu
  */
 
-nav {
+.menu {
     background-color: #333;
 }
 
-nav ul {
+.menu ul {
+    font-size: 0;
     list-style-type: none;
     margin: 0;
     overflow: hidden;
     padding: 0;
     text-align: center;
-    font-size: 0;
 }
 
-nav ul li {
+.menu ul li {
     display: inline-block;
     font-family: "FuturaLTBook", Arial, sans-serif;
     font-size: 16px;
     padding-left: 10px;
 }
 
-nav ul li a {
+.menu ul li a {
     color: white;
     display: block;
     padding: 15px 40px;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+.menu ul li a:hover {
     background: #b1bf92;
     color: #fff;
     outline: none;
     text-decoration: none;
 }
 
-nav ul li a.active {
+.menu ul li a.active {
     background: #b1bf92;
     color: #fff;
     outline: none;
