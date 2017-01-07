@@ -244,6 +244,7 @@ hr {
 #gmap iframe {
     border: 10px solid #090909;
     height: 400px;
+    width: 95%;
 
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
