@@ -150,8 +150,43 @@ const websiteContent = (
     <TopicContainer id="logistics" title="Logistics">
       <Grid>
         <Row>
-          <h2>GETTING THERE</h2>
-          <p>Flight, ferry, etc ...</p>
+          <h2>GETTING TO CROATIA</h2>
+          <p>Being a popular summer tourist destination, getting to Croatia is relatively easy. The closest major city is&nbsp;
+             <a href="https://goo.gl/maps/a8JeWAEuugN2">Split</a> and it is fairly well connected by pretty much any European
+             airline, including low-cost carriers.
+          </p>
+          <p>The second closest major airport is in <a href="https://goo.gl/maps/goc5oZWa3wC2">Dubrovnik</a>. It is about 5 hours
+             away from Hvar via a ferry, so kind of far, but if you are planning on doing some touring before or after the wedding
+             it is a great location to visit.
+          </p>
+          <p>
+            As of the moment of writing of this there were no&nbsp;
+            <a href="https://www.kayak.com/flights/NYC-SPU/2017-08-25/2017-09-02/2adults">direct fligts</a> from the US or Canada to
+            Croatia, so guests coming from there will have to do at least one connection in a major European hub such as Frankfurt,
+            Zurich or Amsterdam.
+          </p>
+        </Row>
+
+        <hr />
+
+        <Row>
+          <h2>FERRY TO THE ISLAND</h2>
+          <p>The Split airport is located about 25km (16mi) from the seaport from where the ferries leave for Hvar. Please note that
+             there are two landing spots on the island - Hvar Town and the Old Town (Stari Grad). The wedding will be in Hvar Town,
+             which is in the south-west end of the island, not in the Old Town, which is on the nortern end.
+          </p>
+          <ul>
+            <p>
+              <li><a href="http://www.jadrolinija.hr/en/ferry-croatia">Jadrolinija</a></li>
+              This is the high-speed catamaran service from Split to Hvar Town which takes about 65 min. This is the fastest option and
+              costs around 10 EUR/11 USD.
+            </p>
+            <p>
+              <li><a href="http://www.krilo.hr/en/index.html">Kapetan Luka</a></li>
+              This is the regular ferry service, which goes to the Old Town (Stari Grad). From there a bus can take you to Hvar Town. This
+              journey takes about 2.5 hours and should cost around 5-10 EUR/6-11 USD.
+            </p>
+          </ul>
         </Row>
 
         <hr />

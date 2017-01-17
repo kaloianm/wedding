@@ -37,7 +37,7 @@
 
 body {
     background-attachment: fixed;
-    background-image: url('/img/bgimage.jpg');
+    background-image: url('../img/bgimage.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,7 +66,7 @@ h2 {
 
 p {
     font-size: 1.4em;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
 }
 
 hr {
@@ -448,7 +448,7 @@ img.location-image {
 
 @media only screen and (max-width: 750px) {
     body {
-        background-image: url('/img/bgimage-small.jpg');
+        background-image: url('../img/bgimage-small.jpg');
     }
 
     h1 {
@@ -485,6 +485,7 @@ img.location-image {
 
     p {
         font-size: 0.8em;
+        padding-bottom: 6px;
     }
 
     .titlebar .bride-name {
