@@ -98,7 +98,7 @@ const websiteContent = (
               <Image className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" />
             </p>
             <p>
-              <a href="https://goo.gl/maps/BvKtzdCKGDm" target="_blank">Google Maps</a> | <a href="img/city-hvar-map.jpg" target="_blank">Tourist Map</a>
+              <a href="https://goo.gl/maps/BvKtzdCKGDm">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
             </p>
           </Col>
 
@@ -109,7 +109,7 @@ const websiteContent = (
               <Image className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" />
             </p>
             <p>
-              <a href="https://goo.gl/maps/MGBa94iBaA42" target="_blank">Google Maps</a> | <a href="img/city-hvar-map.jpg" target="_blank">Tourist Map</a>
+              <a href="https://goo.gl/maps/MGBa94iBaA42">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
             </p>
           </Col>
         </Row>
