@@ -239,13 +239,11 @@ hr {
 
 #gmap {
     text-align: center;
-    margin: 20px auto 20px auto;
 }
 
 #gmap iframe {
-    border: 10px solid #090909;
-    height: 400px;
-    width: 95%;
+    border: 0;
+    width: 500px;
 
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -488,6 +486,11 @@ img.location-image {
 
     .topic-wrapper section {
         padding: 10px 10px 30px 10px;
+    }
+
+    #gmap iframe {
+        border: 0;
+        width: 220px;
     }
 }
 

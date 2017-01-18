@@ -160,7 +160,7 @@ const websiteContent = (
              it is a great location to visit.
           </p>
           <p>
-            As of the moment of writing of this there were no&nbsp;
+            As of the moment of writing there are no&nbsp;
             <a href="https://www.kayak.com/flights/NYC-SPU/2017-08-25/2017-09-02/2adults">direct fligts</a> from the US or Canada to
             Croatia, so guests coming from there will have to do at least one connection in a major European hub such as Frankfurt,
             Zurich or Amsterdam.
@@ -171,20 +171,29 @@ const websiteContent = (
 
         <Row>
           <h2>FERRY TO THE ISLAND</h2>
-          <p>The Split airport is located about 25km (16mi) from the seaport from where the ferries leave for Hvar. Please note that
-             there are two landing spots on the island - Hvar Town and the Old Town (Stari Grad). The wedding will be in Hvar Town,
-             which is in the south-west end of the island, not in the Old Town, which is on the nortern end.
+          <p>The Split airport is located about 25km (16mi) from the seaport from where the ferries leave for Hvar. According to the
+             bus company's <a href="http://www.buscroatia.com/airport-split/">website</a> a taxi should cost about 35 EUR/40 USD for
+             1-3 people and a bus should be around 4 EUR/5 USD per person.
           </p>
+          <div id="gmap">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1QdPbr1DgM7Cgiw2PwAbLgpINiSI"></iframe>
+          </div>
+          <p>Once you are at the seaport and looking for transportation to the island, please note that there are two landing spots on
+             the island - Hvar Town and the Old Town (Stari Grad). The wedding will be in Hvar Town, which is in the south-west end of
+             the island, not in the Old Town, which is on the nortern end. Please make sure you are boarding the right ferry.
+          </p>
+          <div id="gmap">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1H0mc9QKj_OwW1TZCWtQc_tb3s9k"></iframe>
+          </div>
           <ul>
             <p>
               <li><a href="http://www.jadrolinija.hr/en/ferry-croatia">Jadrolinija</a></li>
-              This is the high-speed catamaran service from Split to Hvar Town which takes about 65 min. This is the fastest option and
-              costs around 10 EUR/11 USD.
+              This is a high-speed catamaran service from Split to Hvar Town which takes about 65 min. This is the fastest option and
+              costs around 10 EUR/11 USD per person.
             </p>
             <p>
               <li><a href="http://www.krilo.hr/en/index.html">Kapetan Luka</a></li>
-              This is the regular ferry service, which goes to the Old Town (Stari Grad). From there a bus can take you to Hvar Town. This
-              journey takes about 2.5 hours and should cost around 5-10 EUR/6-11 USD.
+              This is a regular ferry service which takes about 2.5 hours and should cost around 5-10 EUR/6-11 USD per person.
             </p>
           </ul>
         </Row>
@@ -192,24 +201,32 @@ const websiteContent = (
         <hr />
 
         <Row>
+          <h2>DRIVING</h2>
+          <p>For those renting a car or driving to Croatia, as of now we are not very sure what are the driving or parking conditions on
+             the island. From reading various tour guides and traveller comments it appears that there are drivable roads and paid parking
+             spots so it should not be a problem. However we will update this section more as we go on our exporatory trip in the spring.
+          </p>
+        </Row>
+
+        <hr />
+
+        <Row>
           <h2>ACCOMMODATIONS</h2>
-          <p>Hotels, discouns, etc ...</p>
+          <p>Once on the island in Hvar Town there are various accommodation options ranging from fancy hotels to renting an apartment
+             on <a href="https://goo.gl/uHTDYn">AirBnB</a>. The wedding will be in the Amfora Resort so any accommodation within walking
+             distance from there should be fine.
+          </p>
+          <p>For guests wishing to stay in a hotel, the <a href="http://www.suncanihvar.com/">Suncani Hvar</a> chain of hotels offers 20%
+             discount using this code (please click on the 'this' to show it or call us if it doesn't work).
+          </p>
         </Row>
 
         <hr />
 
         <Row>
-          <h2>MAPS AND THINGS TO DO</h2>
-          <div id="gmap">
-            <iframe width="600" height="450" frameBorder="0" style={{border:0}} src="https://goo.gl/OgRIJ6" allowFullScreen></iframe>
-          </div>
-        </Row>
-
-        <hr />
-
-        <Row>
-          <h2>ABOUT CROATIA</h2>
-          <p>Write some shit about Croatia</p>
+          <h2>THINGS TO DO IN CROATIA</h2>
+          <p>Coming soon!
+          </p>
         </Row>
       </Grid>
     </TopicContainer>
