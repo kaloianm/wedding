@@ -87,7 +87,8 @@ hr {
 }
 
 #content {
-    padding: 200px 0 300px 0;
+    padding-top: 200px;
+    padding-bottom: 300px;
 }
 
 /**
@@ -440,41 +441,20 @@ img.location-image {
 }
 
 @media only screen and (max-width: 900px) {
-    /* Hide the menu if running on a device with smaller screen */
+    /* Hide the menu if running on a device with screen smaller than its width */
     nav {
         display: none
     }
 }
 
-@media only screen and (max-width: 750px) {
-    body {
-        background-image: url('../img/bgimage-small.jpg');
-    }
-
-    h1 {
-        font-size: 3.6em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    .titlebar .bride-name {
-        font-size: 6.6em;
-    }
-
-    .titlebar .groom-name {
-        font-family: 'FuturaLTBook';
-        font-size: 3em;
-    }
-
-    .titlebar .wedding-date {
-        font-family: 'FuturaLTBook';
-        font-size: 1.7em;
-    }
-}
-
 @media only screen and (max-width: 600px) {
+    body {
+        background-image: url('../img/bgimage-mobile.jpg');
+        background-position-x: center;
+        background-position-y: top;
+        background-size: 120%;
+    }
+
     h1 {
         font-size: 2em;
     }
@@ -502,7 +482,17 @@ img.location-image {
         font-size: 1.2em;
     }
 
+    .topic-wrapper {
+        width: 90%;
+    }
+
     .topic-wrapper section {
         padding: 10px 10px 30px 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-size: 320%;
     }
 }
