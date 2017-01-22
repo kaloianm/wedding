@@ -14,6 +14,7 @@ import Image from 'react-bootstrap/lib/Image';
 
 import Menu from './components/Menu.component';
 import RSVPForm from './components/RSVPForm.component';
+import SecretTooltip from './components/SecretTooltip.component';
 import TitleBar from './components/TitleBar.component';
 import TopicContainer from './components/TopicContainer.component';
 
@@ -192,8 +193,10 @@ const websiteContent = (
          on <a href="https://goo.gl/uHTDYn">AirBnB</a>. The wedding will be in the Amfora Resort so any accommodation within walking
          distance from there should be fine.
       </p>
-      <p>For guests wishing to stay in a hotel, the <a href="http://www.suncanihvar.com/">Suncani Hvar</a> chain of hotels offers 20%
-         discount using this code (please click on the 'this' to show it or call us if it doesn't work).
+      <p>For guests wishing to stay in a hotel, the <a href="http://www.suncanihvar.com/">Suncani Hvar</a> chain of hotels offers a 20%
+         discount using <SecretTooltip fnTooltip={() => { return 'WEDDKALOIANJOCELYN'; } }>this code</SecretTooltip> (please click on the
+         'this' in order to show it or call us if it doesn't work). The code must be entered in the <i>"Corporate/Promo Code ?"</i> section
+         for the discounted prices to apply and is valid for staying 5 days prior and 5 days after the wedding day.
       </p>
 
       <hr />

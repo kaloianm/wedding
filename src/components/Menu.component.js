@@ -15,10 +15,6 @@ var Link = Scroll.Link;
 
 class Menu extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         var key = 0;
 

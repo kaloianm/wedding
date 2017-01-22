@@ -12,10 +12,6 @@ import React from 'react';
 
 class TopicContainer extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div id={this.props.id} className="topic-wrapper">

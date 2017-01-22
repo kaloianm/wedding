@@ -234,6 +234,35 @@ hr {
 }
 
 /**
+ * Tooltips
+ */
+
+.tooltip {
+    border-bottom: 1px dotted white;
+    display: inline-block;
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    background-color: #555;
+    border-radius: 5px;
+    bottom: 125%;
+    left: 0;
+    opacity: 0;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+    transition: opacity 1s;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+    visibility: visible;
+}
+
+/**
  * Google Maps
  */
 

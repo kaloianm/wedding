@@ -10,10 +10,6 @@ import React from 'react';
 
 class TitleBar extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <header id={this.props.id} className="titlebar">
