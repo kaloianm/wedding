@@ -18,19 +18,13 @@ import SecretTooltip from './components/SecretTooltip.component';
 import TitleBar from './components/TitleBar.component';
 import TopicContainer from './components/TopicContainer.component';
 
-const styles = {
-    whiteSpace: {
-        height: '200px',
-    },
-};
-
 const websiteContent = (
   <div>
 
     <TitleBar id="titlebar">
     </TitleBar>
 
-    <div style={styles.whiteSpace}></div>
+    <div style={{ height: '200px' }}></div>
 
     <Sticky enabled={true}>
       <Menu id="menu"

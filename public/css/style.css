@@ -212,6 +212,11 @@ hr {
     width: 100%;
 }
 
+.wizard-form input[type='radio'] {
+    float: left;
+    margin: 3px 6px;
+}
+
 .wizard-form button {
     background-color: white;
     border-radius: 8px;
