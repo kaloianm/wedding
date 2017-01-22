@@ -1,14 +1,20 @@
-Wedding website
-------------------
+# Wedding Website
 
-A React.js-based wedding website with registration form and server, backed by MongoDB.
+A React.js-based wedding website with registration form and server backed by MongoDB. Uses Webpack to
+bundle both the server and client-side dependencies.
 
-# INSTALLATION
+## INSTALLATION
 
-npm install
-npm start
+```
+npm install && npm start
+```
 
-# LICENSE
+## ENVIRONMENT VARIABLES
+
+* MONGODB_URI - Uri to use to connect to the MongoDB database. Uses the format ```mongodb://host:port/database```. If not
+                specified defaults to ```mongodb://localhost:27017/wedding```.
+
+## LICENSE
 
 (The MIT License)
 

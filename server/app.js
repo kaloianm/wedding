@@ -4,12 +4,17 @@
 
 'use strict';
 
+import winston from 'winston';
 import express from 'express';
-import impl from './impl';
+
+// Use debug logging
+winston.level = 'debug';
+
+import serverAPI from './api-server';
 
 const webApp = express();
 
-webApp.use('/api', impl);
+webApp.use('/api', serverAPI);
 webApp.use('/rsvp', function(req, res) {
     res.redirect('/#rsvp');
 });

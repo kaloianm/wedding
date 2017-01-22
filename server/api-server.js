@@ -11,10 +11,10 @@ import uuidV1 from 'uuid/v1';
 import winston from 'winston';
 
 // Setup mongodb connection and schema
-const mongodbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/jociandkalwedding';
+const mongodbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/wedding';
 
 // Avoid mongoose Promise deprecation warning
-mongoose.Promise = global.Promise
+mongoose.Promise = global.Promise;
 
 mongoose.connect(mongodbUri, function (err, res) {
     if (err) {
@@ -42,13 +42,13 @@ const rsvpSchema = new mongoose.Schema({
 const RSVP = mongoose.model('rsvp', rsvpSchema);
 
 // Setup the web server handlers
-const impl = express();
+const apiServer = express();
 
 // Ensure we can parse JSON-encoded requests
-impl.use(bodyParser.json());
+apiServer.use(bodyParser.json());
 
 // Help for the web service
-impl.all('/', function (req, res) {
+apiServer.all('/', function (req, res) {
     res.status(400).json({
         name: 'Kal and Jocelyn\'s wedding website API',
         version: process.env.npm_package_version,
@@ -61,7 +61,7 @@ impl.all('/', function (req, res) {
 });
 
 // The 'rsvp' command
-impl.post('/rsvp', function (req, res) {
+apiServer.post('/rsvp', function (req, res) {
     const requestId = uuidV1();
     winston.log('debug', 'rsvp request', requestId, req.body);
 
@@ -93,4 +93,4 @@ impl.post('/rsvp', function (req, res) {
     });
 });
 
-export default impl;
+export default apiServer;
