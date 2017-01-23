@@ -13,6 +13,8 @@ npm install && npm start
 
 * MONGODB_URI - Uri to use to connect to the MongoDB database. Uses the format ```mongodb://host:port/database```. If not
                 specified defaults to ```mongodb://localhost:27017/wedding```.
+* GOOGLE_ANALYTICS_ACCOUNT_ID - The account id to use for submitting Google Analytics data. If left empty, no analytics data
+                will be collected.
 
 ## LICENSE
 
