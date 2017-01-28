@@ -5,12 +5,14 @@
 'use strict';
 
 import async from 'async';
+import cookieParser from 'cookie-parser';
 import express from 'express';
 import mongoose from 'mongoose';
 import UA from 'universal-analytics';
 import winston from 'winston';
 
 import ServerAPI from './server-api';
+import WebsiteVisitor from './models/WebsiteVisitor';
 
 // Avoid mongoose Promise deprecation warning
 mongoose.Promise = global.Promise;
@@ -40,6 +42,31 @@ async.waterfall([
                 callback(null);
             }
         });
+    },
+
+    function setupMongoDBUserTracking(callback) {
+        WebApp.use(
+            '/',
+            cookieParser(),
+            function (req, res, next) {
+                if (req.path === '/') {
+                    new WebsiteVisitor({
+                        ip: req.ip,
+                        userAgent: req.headers['user-agent'],
+                        sessionId: req.cookies['_ga'],
+                    }).save((err) => {
+                        if (err) {
+                            winston.log('info',
+                                'Failed to write MongoDB user tracking data due to',
+                                JSON.stringify(err));
+                        }
+                    });
+                }
+
+                next('route');
+            });
+
+        callback(null);
     },
 
     function setupGoogleAnalytics(callback) {
