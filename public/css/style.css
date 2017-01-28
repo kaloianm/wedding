@@ -19,7 +19,7 @@ body {
     background-size: cover;
     color: #fff;
     font-family: "FuturaLTBook", Arial, sans-serif;
-    font-size: 1em;
+    font-size: medium;
     line-height: 1.4;
     text-align: center;
 }
@@ -113,15 +113,11 @@ hr {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    padding: 0;
     text-align: center;
 }
 
 .menu ul li {
     display: inline-block;
-    font-family: "FuturaLTBook", Arial, sans-serif;
-    font-size: 16px;
-    padding-left: 10px;
 }
 
 .menu ul li a {
@@ -181,7 +177,8 @@ hr {
     border-radius: 8px;
     border: none;
     box-sizing: border-box;
-    font-size: 1.4em;
+    font-family: inherit;
+    font-size: inherit;
     margin: 8px 0;
     padding: 12px 20px;
     text-align: center;
@@ -429,6 +426,7 @@ img.location-image {
  * Media queries
  */
 
+/* Desktop */
 @media only screen and (max-width: 1000px) {
     h1 {
         font-size: 4.8em;
@@ -439,29 +437,29 @@ img.location-image {
     }
 
     .titlebar .groom-name {
-        font-family: 'FuturaLTBook';
         font-size: 4em;
     }
 
     .titlebar .wedding-date {
-        font-family: 'FuturaLTBook';
         font-size: 2.5em;
     }
 }
 
-@media only screen and (max-width: 900px) {
+/* Tablet */
+@media only screen and (max-width: 850px) {
     /* Hide the menu if running on a device with screen smaller than its width */
     nav {
         display: none
     }
 }
 
+/* Phablet */
 @media only screen and (max-width: 600px) {
     body {
         background-image: url('../img/bgimage-mobile.jpg');
         background-position-x: center;
         background-position-y: top;
-        background-size: 120%;
+        background-size: 140%;
     }
 
     h1 {
@@ -478,17 +476,15 @@ img.location-image {
     }
 
     .titlebar .bride-name {
-        font-size: 3.3em;
+        font-size: 4em;
     }
 
     .titlebar .groom-name {
-        font-family: 'FuturaLTBook';
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .titlebar .wedding-date {
-        font-family: 'FuturaLTBook';
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     .topic-wrapper {
@@ -509,6 +505,7 @@ img.location-image {
     }
 }
 
+/* Phone */
 @media only screen and (max-width: 400px) {
     body {
         background-size: 320%;

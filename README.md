@@ -18,6 +18,10 @@ npm install && npm start
                 will be collected.
 * LOG_LEVEL - The logging level that the web app's components should be using. If not specified, defaults to ```debug```.
 
+## COLOPHON
+
+Implemented on Mac using [Microsoft Visual Studio Code](https://code.visualstudio.com/).
+
 ## LICENSE
 
 (The MIT License)
