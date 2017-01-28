@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'EdwardianScrAltITCTT';
+    src: url('edwasai.eot');
+    src: url('edwasai.eot?#iefix') format('embedded-opentype'),
+         url('edwasai.woff') format('woff'),
+         url('edwasai.ttf') format('truetype'),
+         url('edwasai.svg#edwasai') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaLT';
+    src: url('futuralt-webfont.eot');
+    src: url('futuralt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('futuralt-webfont.woff') format('woff'),
+         url('futuralt-webfont.ttf') format('truetype'),
+         url('futuralt-webfont.svg#futura_ltbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaLTBook';
+    src: url('futuralt-book-webfont.eot');
+    src: url('futuralt-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('futuralt-book-webfont.woff') format('woff'),
+         url('futuralt-book-webfont.ttf') format('truetype'),
+         url('futuralt-book-webfont.svg#futura_ltbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
