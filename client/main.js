@@ -4,13 +4,9 @@
 
 'use strict';
 
-import Col from 'react-bootstrap/lib/Col';
-import Grid from 'react-bootstrap/lib/Grid';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Row from 'react-bootstrap/lib/Row';
 import Sticky from 'react-stickynode';
-import Image from 'react-bootstrap/lib/Image';
 
 import Menu from './components/Menu.component';
 import RSVPForm from './components/RSVPForm.component';
@@ -37,34 +33,34 @@ const websiteContent = (
     </Sticky>
 
     <TopicContainer id="brideandgroom" name="brideandgroom" title="The Bride and Groom">
-      <Grid>
-        <Row>
-          <Col className="one-half column">
+      <div className="container">
+        <div className="row">
+          <div className="one-half column">
             <p>
-              <Image className="thumbnail" src="img/jocelyn-baby.jpg" alt="Jocelyn" /> Jocelyn is a lovely uncomplicated girl who was
+              <img className="thumbnail" src="img/jocelyn-baby.jpg" alt="Jocelyn" /> Jocelyn is a lovely uncomplicated girl who was
               born and raised in New York. As exciting as New York was for an impressionable young girl she made it her mission to live
               and explore as many beautiful cities as she could. Thanks to her beloved sister Wendy it was possible to jump from the
               neon nights of Miami, through the diverse city of London, to then learn the leisurely ways of Italy. While Jocelyn was
               exploring and realizing her passion in life, she realized she needed to find her way back to the city she knew her dream
               job was waiting for her in fashion.
             </p>
-          </Col>
+          </div>
 
-          <Col className="one-half column">
+          <div className="one-half column">
             <p>
-              <Image className="thumbnail" src="img/kal-baby.jpg" alt="Kal" /> Kal is a burly Eastern European who moved from his
+              <img className="thumbnail" src="img/kal-baby.jpg" alt="Kal" /> Kal is a burly Eastern European who moved from his
               homeland Bulgaria at the young age of 22 to the lovely city of Toronto. Kal then found himself in the IT mecca of
               Seattle and realized after 9 years of the beautiful mountain backdrop and serene lakes that he needs to escape to the
               center of the universe, New York.
             </p>
-          </Col>
-        </Row>
-      </Grid>
+          </div>
+        </div>
+      </div>
 
       <hr />
 
       <p>
-        <Image className="proposal-image" src="img/proposal.jpg" alt="Kal Proposing To Jocelyn" />
+        <img className="proposal-image" src="img/proposal.jpg" alt="Kal Proposing To Jocelyn" />
       </p>
 
       <h2>OUR STORY</h2>
@@ -77,28 +73,28 @@ const websiteContent = (
     </TopicContainer>
 
     <TopicContainer id="wedding" title="Wedding">
-      <Grid>
-        <Col className="one-half column">
+      <div className="container">
+        <div className="one-half column">
           <h2>CEREMONY</h2>
           <p>16:00 @ Sveti Marak (St Mark&#39;s) Church Courtyard</p>
           <p>
-            <Image className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" />
+            <img className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" />
           </p>
           <p>
             <a href="https://goo.gl/maps/BvKtzdCKGDm">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
           </p>
-        </Col>
-        <Col className="one-half column">
+        </div>
+        <div className="one-half column">
           <h2>RECEPTION</h2>
           <p>17:00 @ Bonj les Bains Beach Club</p>
           <p>
-            <Image className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" />
+            <img className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" />
           </p>
           <p>
             <a href="https://goo.gl/maps/MGBa94iBaA42">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
           </p>
-        </Col>
-      </Grid>
+        </div>
+      </div>
 
       <hr />
 
