@@ -51,7 +51,7 @@ async.waterfall([
             function (req, res, next) {
                 if (req.path === '/') {
                     new WebsiteVisitor({
-                        ip: req.ip,
+                        ip: req.connection.remoteAddress,
                         userAgent: req.headers['user-agent'],
                         sessionId: req.cookies['_ga'],
                     }).save((err) => {
@@ -86,7 +86,7 @@ async.waterfall([
                     const uaData = {
                         ds: 'web',
                         dp: '/',
-                        uip: req.ip,
+                        uip: req.connection.remoteAddress,
                         ua: req.headers['user-agent'],
                     };
 
