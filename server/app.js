@@ -28,6 +28,7 @@ winston.level = process.env.LOG_LEVEL || 'debug';
 
 // The Web server chain
 const WebApp = express();
+WebApp.set('trust proxy', true);
 
 // Execute the initialization sequence
 async.waterfall([
@@ -51,7 +52,7 @@ async.waterfall([
             function (req, res, next) {
                 if (req.path === '/') {
                     new WebsiteVisitor({
-                        ip: req.connection.remoteAddress,
+                        ip: req.ip,
                         userAgent: req.headers['user-agent'],
                         sessionId: req.cookies['_ga'],
                     }).save((err) => {
@@ -86,7 +87,7 @@ async.waterfall([
                     const uaData = {
                         ds: 'web',
                         dp: '/',
-                        uip: req.connection.remoteAddress,
+                        uip: req.ip,
                         ua: req.headers['user-agent'],
                     };
 
