@@ -25,6 +25,7 @@ if (process.env.GOOGLE_ANALYTICS_ACCOUNT_ID) {
             if (req.path === '/') {
                 const visitor = req.visitor;
                 const uaData = {
+                    ds: 'web',
                     dp: '/',
                     uip: req.ip,
                     ua: req.headers['user-agent'],
