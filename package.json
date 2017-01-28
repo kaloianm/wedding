@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/kaloianm/wedding#readme",
   "dependencies": {
+    "async": "^2.1.4",
     "body-parser": "^1.15.2",
     "es6-object-assign": "^1.0.3",
     "es6-promise": "^4.0.5",

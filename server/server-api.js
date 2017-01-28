@@ -10,45 +10,16 @@ import mongoose from 'mongoose';
 import uuidV1 from 'uuid/v1';
 import winston from 'winston';
 
-// Setup mongodb connection and schema
-const mongodbUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/wedding';
-
-// Avoid mongoose Promise deprecation warning
-mongoose.Promise = global.Promise;
-
-mongoose.connect(mongodbUri, function (err, res) {
-    if (err) {
-        winston.log('error', 'Failed to connect to mongodb', mongodbUri, err);
-    } else {
-        winston.log('debug', 'Successfully connected to mongodb', mongodbUri, res);
-    }
-});
-
-const guestSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    email: String,
-    meal: String,
-    dietaryRestrictions: String,
-});
-
-const rsvpSchema = new mongoose.Schema({
-    rsvpId: { type: String, required: true },
-    date: { type: Date, default: () => Date.now() },
-    guest: { type: guestSchema, required: true },
-    willAttend: { type: Boolean, required: true },
-    guestPlusOne: guestSchema,
-});
-
-const RSVP = mongoose.model('rsvp', rsvpSchema);
+import RSVP from './models/RSVP';
 
 // Setup the web server handlers
-const apiServer = express();
+const ServerAPI = express();
 
 // Ensure we can parse JSON-encoded requests
-apiServer.use(bodyParser.json());
+ServerAPI.use(bodyParser.json());
 
 // Help for the web service
-apiServer.all('/', function (req, res) {
+ServerAPI.all('/', function (req, res) {
     res.status(400).json({
         name: 'Kal and Jocelyn\'s wedding website API',
         version: process.env.npm_package_version,
@@ -61,7 +32,7 @@ apiServer.all('/', function (req, res) {
 });
 
 // The 'rsvp' command
-apiServer.post('/rsvp', function (req, res) {
+ServerAPI.post('/rsvp', function (req, res) {
     const requestId = uuidV1();
     winston.log('debug', 'rsvp request', requestId, req.body);
 
@@ -93,4 +64,4 @@ apiServer.post('/rsvp', function (req, res) {
     });
 });
 
-export default apiServer;
+export default ServerAPI;
