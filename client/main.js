@@ -177,7 +177,7 @@ const websiteContent = (
       <h2>DRIVING</h2>
       <p>For those renting a car or driving to Croatia, we don't yet know what are the driving or parking conditions on the island. From
          reading various tour guides and traveller comments it appears that there are drivable roads and paid parking spots so it should
-         not be a problem. However we will update this section more as we go on our exporatory trip in the spring.
+         not be a problem. However we will update this section more as we go on our exploratory trip in the spring.
       </p>
 
       <hr />
@@ -202,12 +202,11 @@ const websiteContent = (
 
     <TopicContainer id="gifts" title="Gifts">
       <p>Dear family and friends,</p>
-      <p>We feel honoured that you are all travelling a long way to come and celebrate our special day with
-         us. For this reason we don't want anyone to feel obliged to buy us gifts. Your presence is the
-         biggest gift.
+      <p>We feel honoured that you are all travelling a long way to come and celebrate our special day with us. For this reason we don't
+         want anyone to feel obliged to buy us gifts. Your presence is the biggest gift.
       </p>
-      <p>If you do feel that you want to give us a gift please remember that just like you, we will only have
-         a suitcase full of clothes so we won't be able to carry any items back.
+      <p>If you do feel that you want to give us a gift please remember that just like you, we will only have a suitcase full of clothes
+        so we won't be able to carry any items back.
       </p>
       <p>Thank you in advance!
       </p>
