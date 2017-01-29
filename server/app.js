@@ -108,7 +108,7 @@ async.waterfall([
 
     function startWebServer(callback) {
         WebApp.use('/api', ServerAPI);
-        WebApp.use(express.static('public'));
+        WebApp.use(express.static('static'));
 
         var server = WebApp.listen(webAppPort, () => {
             winston.log('info', 'Web server listening on port', webAppPort);

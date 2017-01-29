@@ -27,7 +27,7 @@ module.exports = [
         name: 'Client-side application',
         entry: './client/main.js',
         output: {
-            path: './public/js',
+            path: './static/js',
             filename: 'bundle.js'
         },
         target: 'web',
