@@ -14,7 +14,8 @@
 body {
     background-attachment: fixed;
     background-image: url('../img/bgimage.jpg');
-    background-position: center;
+    background-position-x: center;
+    background-position-y: top;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -426,7 +427,7 @@ img.location-image {
  */
 
 /* Desktop */
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
     h1 {
         font-size: 4.8em;
     }
@@ -445,7 +446,7 @@ img.location-image {
 }
 
 /* Tablet */
-@media only screen and (max-width: 850px) {
+@media (max-width: 850px) {
     /* Hide the menu if running on a device with screen smaller than its width */
     nav {
         display: none
@@ -453,11 +454,9 @@ img.location-image {
 }
 
 /* Phablet */
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     body {
         background-image: url('../img/bgimage-mobile.jpg');
-        background-position-x: center;
-        background-position-y: top;
         background-size: 140%;
     }
 
@@ -505,8 +504,8 @@ img.location-image {
 }
 
 /* Phone */
-@media only screen and (max-width: 400px) {
+@media (max-width: 400px) {
     body {
-        background-size: 320%;
+        background-size: 360%;
     }
 }
