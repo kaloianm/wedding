@@ -24,11 +24,11 @@ const websiteContent = (
 
     <Sticky enabled={true}>
       <Menu id="menu"
-            items={[{ label: 'THE BRIDE & GROOM', href: 'brideandgroom' },
-                    { label: 'THE WEDDING', href: 'wedding' },
-                    { label: 'RSVP', href: 'rsvp' },
-                    { label: 'LOGISTICS', href: 'logistics' },
-                    { label: 'GIFTS', href: 'gifts' }]}>
+        items={[{ label: 'THE BRIDE & GROOM', href: 'brideandgroom' },
+                { label: 'THE WEDDING', href: 'wedding' },
+                { label: 'RSVP', href: 'rsvp' },
+                { label: 'LOGISTICS', href: 'logistics' },
+                { label: 'GIFTS', href: 'gifts' }]}>
       </Menu>
     </Sticky>
 
@@ -132,7 +132,7 @@ const websiteContent = (
       </p>
       <p>The second closest major airport is in <a href="https://goo.gl/maps/goc5oZWa3wC2">Dubrovnik</a>. It is about 5 hours away
          from Hvar via a ferry, which is kind of far, but if you are planning on doing some touring before or after the wedding it is
-         a great location to visit.
+         a great location to visit. Have a look at the 'Things to do section' further down for more information on that.
       </p>
       <p>As of the time of writing there are no&nbsp;
          <a href="https://www.kayak.com/flights/NYC-SPU/2017-08-25/2017-09-02/2adults">direct flights</a>&nbsp;
@@ -147,25 +147,39 @@ const websiteContent = (
          company's <a href="http://www.buscroatia.com/airport-split/">website</a> a taxi should cost about 35 EUR/40 USD for 1-3 people and
          a bus should be around 4 EUR/5 USD per person.
       </p>
+
       <div id="gmap">
         <iframe src="https://www.google.com/maps/d/embed?mid=1QdPbr1DgM7Cgiw2PwAbLgpINiSI"></iframe>
       </div>
+
       <p>Once you are at the seaport and looking for transportation to the island, please note that there are two landing spots on the
          island - Hvar Town and the Old Town (Stari Grad). The wedding will be in Hvar Town, which is in the south-west end of the island,
          not in the Old Town, which is on the nortern end. Please make sure you are boarding the right ferry, but even if you make a
          mistake, stay calm because there is a bus between the two.
       </p>
+
       <div id="gmap">
         <iframe src="https://www.google.com/maps/d/embed?mid=1H0mc9QKj_OwW1TZCWtQc_tb3s9k"></iframe>
       </div>
-      <p>
-        <a href="http://www.jadrolinija.hr/en/ferry-croatia">Jadrolinija</a><br />
-        This is a high-speed catamaran service from Split to Hvar Town which takes about 65 min. This is the fastest option and costs
-        around 10 EUR/11 USD per person.
+
+      <h3><a href="http://www.jadrolinija.hr/en/ferry-croatia">Jadrolinija</a></h3>
+      <p>This is a high-speed catamaran service from Split to Hvar Town which takes about 65 min. This is the fastest option and costs
+         around 10 EUR/11 USD per person. If you have a car, this site also contains the schedule and pricing for the ferries, which
+         transport cars to the island.
       </p>
-      <p>
-        <a href="http://www.krilo.hr/en/index.html">Kapetan Luka</a><br />
-        This is a regular ferry service which takes about 2.5 hours and should cost around 5-10 EUR/6-11 USD per person.
+      <br />
+
+      <h3><a href="http://www.krilo.hr/en/index.html">Kapetan Luka</a></h3>
+      <p>This is the regular ferry service which takes about 2.5 hours and should cost around 5-10 EUR/6-11 USD per person.
+      </p>
+      <br />
+
+      <h3><a href="https://www.atlantis-marine.net/en/croatia-boat-transfers">Chartered Speed Boat</a></h3>
+      <p>If you are coming as a group, this site has information for inclusive transportation packages with pickup from the airport. The
+         sailing part of the journey takes between 45 min to 1 hour, which is similar to the catamaran service, but is a little bit more
+         convenient because it also includes a pickup from the airport. If you choose this option, there is a 5% discount
+         using <SecretTooltip fnTooltip={() => { return 'adriaticweddings'; }}>this code</SecretTooltip> (please click on the 'this' in
+         order to display the code).
       </p>
 
       <hr />
@@ -184,7 +198,7 @@ const websiteContent = (
          distance from there should be fine.
       </p>
       <p>For guests wishing to stay in a hotel, the <a href="http://www.suncanihvar.com/">Suncani Hvar</a> chain of hotels offers a 20%
-         discount using <SecretTooltip fnTooltip={() => { return 'WEDDKALOIANJOCELYN'; } }>this code</SecretTooltip> (please click on the
+         discount using <SecretTooltip fnTooltip={() => { return 'WEDDKALOIANJOCELYN'; }}>this code</SecretTooltip> (please click on the
          'this' in order to show it or call us if it doesn't work). The code must be entered in the <i>"Corporate/Promo Code ?"</i> section
          for the discounted prices to apply and is valid for staying 5 days prior and 5 days after the wedding day.
       </p>
@@ -192,8 +206,47 @@ const websiteContent = (
       <hr />
 
       <h2>THINGS TO DO IN CROATIA</h2>
-      <p>Coming soon!
+      <p>Since all of you are coming from different parts of the world, we presume that you would like to make a full vacation out of your
+         trip to Croatia. In this section we are listing some of the main tourist places to visit and have suggestions for routes to take.
+         As a disclaimer, these suggestions are compiled from various online sources such as Lonely Planet and not locations we have actually
+         visited, but trust us - they are awesome :)
       </p>
+      <br />
+
+      <h3><a href="https://www.lonelyplanet.com/croatia/dubrovnik">DUBROVNIK</a></h3>
+      <p>
+        <img className="location-image" src="img/dubrovnik.jpg" alt="Dubrovnik old city" />
+      </p>
+      <p>Located in the very south of the country, Dubrovnik was once called the "Pearl of the Adriatic" for its architecture and importance
+         in trade. We won't pretend that we know much about its history, but it is a place which must be visited and is also a convenient
+         location to fly into and work your way up the coast to Hvar. On top of that, for the 'Game of Thrones' fans, quite a few scenes from
+         this show were filmed in Dubrovnik. See&nbsp;
+         <a href="http://www.telegraph.co.uk/travel/maps-and-graphics/game-of-thrones-filming-locations-guide/">this article</a> for more
+         information.
+      </p>
+      <br />
+
+      <h3><a href="https://www.lonelyplanet.com/croatia/plitvice-lakes-national-park/attractions/plitvice-lakes-national-park/a/poi-sig/1019024/1318903">PLITVICE LAKES</a></h3>
+      <p>
+        <img className="location-image" src="img/plitvice-lakes.jpg" alt="Plitvice lakes" />
+      </p>
+      <p>This is a beautiful national park covered with heavy forests and waterfalls. It is in the northern half of the country and is about 2 hours
+         drive from Zagreb, the capital of Croatia and 4-5 hours from Split. If you find good flights to Zagreb, Plitvice Lakes can serve as a good
+         midway destination to visit while making you way to the south of the country.
+      </p>
+      <br />
+
+      <h3><a href="https://www.lonelyplanet.com/croatia/dalmatia/hvar-island">HVAR AND THE DALMATIAN ISLANDS</a></h3>
+      <p>
+        <img className="location-image" src="img/mljet.jpg" alt="Mljet" />
+      </p>
+      <p>The Dalmatian islands (one of which is Hvar) offer amazing scenery, nice beaches and sailing opportunities. Island hopping, swimming and
+         sunbathing is great way to spend a few days or even a week. Of these islands, Hvar is deemed as the 'party island' while&nbsp;
+         <a href="https://www.lonelyplanet.com/croatia/dalmatia/mljet-island">Mljet</a> is the most scenic and tranquil. It is located between Hvar
+         and Dubrovnik.
+      </p>
+      <br />
+
     </TopicContainer>
 
     <TopicContainer id="gifts" title="Gifts">
@@ -209,6 +262,6 @@ const websiteContent = (
     </TopicContainer>
 
   </div>
-);      
+);
 
 ReactDOM.render(websiteContent, document.getElementById('content'));
