@@ -217,9 +217,9 @@ const websiteContent = (
       </p>
       <br />
 
-      <h3><a href="https://www.lonelyplanet.com/croatia/dubrovnik">DUBROVNIK</a></h3>
+      <h2><a href="https://www.lonelyplanet.com/croatia/dubrovnik">DUBROVNIK</a></h2>
       <p>
-        <img className="location-image" src="img/dubrovnik.jpg" alt="Dubrovnik old city" />
+        <img className="large-image" src="img/dubrovnik.jpg" alt="Dubrovnik old city" />
       </p>
       <p>Located in the very south of the country, Dubrovnik was once called the "Pearl of the Adriatic" for its architecture and importance
          in trade. We won't pretend that we know much about its history, but it is a place which must be visited and is also a convenient
@@ -230,9 +230,9 @@ const websiteContent = (
       </p>
       <br />
 
-      <h3><a href="https://www.lonelyplanet.com/croatia/plitvice-lakes-national-park/attractions/plitvice-lakes-national-park/a/poi-sig/1019024/1318903">PLITVICE LAKES</a></h3>
+      <h2><a href="https://www.lonelyplanet.com/croatia/plitvice-lakes-national-park/attractions/plitvice-lakes-national-park/a/poi-sig/1019024/1318903">PLITVICE LAKES</a></h2>
       <p>
-        <img className="location-image" src="img/plitvice-lakes.jpg" alt="Plitvice lakes" />
+        <img className="large-image" src="img/plitvice-lakes.jpg" alt="Plitvice lakes" />
       </p>
       <p>This is a beautiful national park covered with heavy forests and waterfalls. It is in the northern half of the country and is about 2 hours
          drive from Zagreb, the capital of Croatia and 4-5 hours from Split. If you find good flights to Zagreb, Plitvice Lakes can serve as a good
@@ -240,9 +240,9 @@ const websiteContent = (
       </p>
       <br />
 
-      <h3><a href="https://www.lonelyplanet.com/croatia/dalmatia/hvar-island">HVAR AND THE DALMATIAN ISLANDS</a></h3>
+      <h2><a href="https://www.lonelyplanet.com/croatia/dalmatia/hvar-island">HVAR AND THE DALMATIAN ISLANDS</a></h2>
       <p>
-        <img className="location-image" src="img/mljet.jpg" alt="Mljet" />
+        <img className="large-image" src="img/mljet.jpg" alt="Mljet" />
       </p>
       <p>The Dalmatian islands (one of which is Hvar) offer amazing scenery, nice beaches and sailing opportunities. Island hopping, swimming and
          sunbathing is great way to spend a few days or even a week. Of these islands, Hvar is deemed as the 'party island' while&nbsp;
