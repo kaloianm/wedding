@@ -25,27 +25,30 @@ class RSVPForm extends React.Component {
             guestInfo: {},
             guestPlusOneInfo: {},
 
-            submitMessage: null,
+            submitStatus: null,
         };
     }
 
     render() {
+        var self = this;
+
         const guestInfo = this.state.guestInfo;
         const guestPlusOneInfo = this.state.guestPlusOneInfo;
 
         return (
             <div id={this.props.id} className="wizard-form">
-                <p>
-                    Please complete the form below to let us know if you will be joining us in Hvar.
+                <p>Please complete the form below to let us know if you will be joining us in Hvar and to inform us of your dietary restrictions
+                   if any.
                 </p>
                 <br />
-                <p>
-                    Fields marked with * are mandatory.
-                </p>
+
+                <p>Fields marked with * are mandatory.</p>
                 <br />
+
                 {this.renderTextInput('name', 'Name*:', guestInfo)}
-                {this.renderTextInput('email', 'Email:', guestInfo)}
+                {this.renderTextInput('email', 'Email*:', guestInfo)}
                 <br />
+
                 {this.renderRadioInput(
                     'attendance',
                     'Attendance*:',
@@ -56,6 +59,7 @@ class RSVPForm extends React.Component {
                     guestInfo)
                 }
                 <br />
+
                 {guestInfo.attendance === 'yes' &&
                     <div>
                         {this.renderRadioInput(
@@ -83,6 +87,7 @@ class RSVPForm extends React.Component {
                     </div>
                 }
                 <br />
+
                 {guestInfo.attendance === 'yes' && guestPlusOneInfo.attendance === 'yes' &&
                     <div>
                         {this.renderTextInput('name', 'Name:', guestPlusOneInfo)}
@@ -102,11 +107,18 @@ class RSVPForm extends React.Component {
                             guestPlusOneInfo)}
                     </div>
                 }
-                <div>
-                    {this.state.submitMessage && this.state.submitMessage}
-                    <br />
-                    <button onClick={this.submitRSVP.bind(this)}>Submit</button>
-                </div>
+                <br />
+
+                {this.state.submitStatus &&
+                    <div className={this.state.submitStatus.isError ? 'alert-error' : 'alert-success'}>
+                        <span className="alert-closebtn"
+                            onClick={() => { self.state.submitStatus = null; self.setState(self.state); }}>&times;</span>
+                        {this.state.submitStatus.message}
+                    </div>
+                }
+                <br />
+
+                <button onClick={this.submitRSVP.bind(this)}>Submit</button>
             </div>
         );
     }
@@ -119,12 +131,14 @@ class RSVPForm extends React.Component {
         function validateGuest(info) {
             if (!info.name || info.name.trim().empty)
                 return 'Name cannot be left empty';
-            if (info.email && !isEmail(info.email))
+            if (!info.email || info.email.trim().empty)
+                return 'Email cannot be left empty';
+            if (!isEmail(info.email))
                 return 'Email format is not valid'
             if (!info.attendance)
-                return 'Please specify whether you will be joining us';
+                return 'Please specify whether you or your guest will be joining us';
             if (info.attendance === 'yes' && !info.meal)
-                return 'Type of meal must be selected';
+                return "Please let us know of your or your guest's meal preference";
             return null;
         }
 
@@ -216,7 +230,7 @@ class RSVPForm extends React.Component {
         const state = this.state;
 
         if (this.validate()) {
-            self.state.submitMessage = this.validate();
+            self.state.submitStatus = { isError: true, message: this.validate() };
             self.setState(self.state);
             return;
         }
@@ -237,11 +251,12 @@ class RSVPForm extends React.Component {
 
         this.getAPIClient().rsvp(guestInfo, willAttend, guestPlusOneInfo, function (errorMsg, successMsg) {
             if (errorMsg) {
-                self.state.submitMessage = errorMsg;
+                self.state.submitStatus = { isError: true, message: errorMsg };
                 self.setState(self.state);
             } else {
-                self.state.submitMessage = willAttend ? "Yay, we can't wait to see you!" :
-                    "Oh no! We are sad we don't get to celebrate with you :(";
+                self.state.submitStatus = {
+                    isError: false, message: 'Your response was recorded successfully. Thank you!'
+                };
                 self.setState(self.state);
             }
         });

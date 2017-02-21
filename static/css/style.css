@@ -212,6 +212,35 @@ hr {
 }
 
 /**
+ * Alerts
+ */
+
+.alert-error {
+    background-color: red;
+    color: white;
+    margin-bottom: 15px;
+    padding: 7px;
+}
+
+.alert-success {
+    background-color: green;
+    color: white;
+    margin-bottom: 15px;
+    padding: 7px;
+}
+
+.alert-closebtn {
+    color: white;
+    cursor: pointer;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+/**
  * Tooltips
  */
 
