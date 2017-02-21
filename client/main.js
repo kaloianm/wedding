@@ -28,6 +28,7 @@ const websiteContent = (
                 { label: 'THE WEDDING', href: 'wedding' },
                 { label: 'RSVP', href: 'rsvp' },
                 { label: 'LOGISTICS', href: 'logistics' },
+                { label: 'THINGS TO DO', href: 'thingstodo' },
                 { label: 'GIFTS', href: 'gifts' }]}>
       </Menu>
     </Sticky>
@@ -206,10 +207,9 @@ const websiteContent = (
          'this' in order to show it or call us if it doesn't work). The code must be entered in the <i>"Corporate/Promo Code ?"</i> section
          for the discounted prices to apply and is valid for staying 5 days prior and 5 days after the wedding day.
       </p>
+    </TopicContainer>
 
-      <hr />
-
-      <h2>THINGS TO DO IN CROATIA</h2>
+    <TopicContainer id="thingstodo" title="Things to do in Croatia">
       <p>Since all of you are coming from different parts of the world, we presume that you would like to make a full vacation out of your
          trip to Croatia. In this section we are listing some of the main tourist places to visit and have suggestions for routes to take.
          As a disclaimer, these suggestions are compiled from various online sources such as Lonely Planet and not locations we have actually
@@ -249,8 +249,6 @@ const websiteContent = (
          <a href="https://www.lonelyplanet.com/croatia/dalmatia/mljet-island">Mljet</a> is the most scenic and tranquil. It is located between Hvar
          and Dubrovnik.
       </p>
-      <br />
-
     </TopicContainer>
 
     <TopicContainer id="gifts" title="Gifts">

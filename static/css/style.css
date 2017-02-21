@@ -129,7 +129,7 @@ hr {
 .menu ul li a {
     color: white;
     display: block;
-    padding: 15px 40px;
+    padding: 15px 30px;
     text-decoration: none;
 }
 
@@ -481,7 +481,7 @@ img.location-image {
 }
 
 /* Tablet */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     /* Hide the menu if running on a device with screen smaller than its width */
     nav {
         display: none
