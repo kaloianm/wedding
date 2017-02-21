@@ -329,7 +329,7 @@ img.thumbnail {
     border-radius: 2px;
 }
 
-img.proposal-image {
+img.large-image {
     border: 10px solid #090909;
     display: block;
     height: auto;
@@ -533,7 +533,7 @@ img.location-image {
         padding: 10px 10px 30px 10px;
     }
 
-    img.proposal-image {
+    img.large-image {
         max-width: 75%;
     }
 

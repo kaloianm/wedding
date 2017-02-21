@@ -60,7 +60,7 @@ const websiteContent = (
       <hr />
 
       <p>
-        <img className="proposal-image" src="img/proposal.jpg" alt="Kal Proposing To Jocelyn" />
+        <img className="large-image" src="img/proposal.jpg" alt="Kal Proposing To Jocelyn" />
       </p>
 
       <h2>OUR STORY</h2>
@@ -141,6 +141,10 @@ const websiteContent = (
       </p>
 
       <hr />
+
+      <p>
+        <img className="large-image" src="img/hvar.jpg" alt="Hvar town" />
+      </p>
 
       <h2>FERRY TO THE ISLAND OF HVAR</h2>
       <p>The Split airport is located about 25km (16mi) from the seaport from where the ferries leave for Hvar. According to the bus
