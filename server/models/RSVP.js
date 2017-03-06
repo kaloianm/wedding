@@ -11,6 +11,8 @@ const GuestSchema = new mongoose.Schema({
     email: String,
     meal: String,
     dietaryRestrictions: String,
+    cocktailEvening: String,
+    hangoverBrunch: String,
 });
 
 const RSVPSchema = new mongoose.Schema({
