@@ -38,21 +38,20 @@ const websiteContent = (
         <div className="row">
           <div className="one-half column">
             <p>
-              <img className="thumbnail" src="img/jocelyn-baby.jpg" alt="Jocelyn" /> Jocelyn is a lovely uncomplicated girl who was
-              born and raised in New York. As exciting as New York was for an impressionable young girl she made it her mission to live
-              and explore as many beautiful cities as she could. Thanks to her beloved sister Wendy it was possible to jump from the
-              neon nights of Miami, through the diverse city of London, to then learn the leisurely ways of Italy. While Jocelyn was
-              exploring and realizing her passion in life, she realized she needed to find her way back to the city she knew her dream
-              job was waiting for her in fashion.
+              <img className="thumbnail" src="img/jocelyn-baby.jpg" alt="Jocelyn" /> Jocelyn is a sweet and giving girl who always sees the
+              beauty in people. As exciting as it was to be rasied in New York, she made it her mission to live and explore as many
+              beautiful cities as she could. Thanks to her beloved sister Wendy it was possible to jump from the neon nights of Miami, through
+              the diverse city of London, to then learn the leisurely ways of Italy. While Jocelyn was exploring and realizing her passion in
+              life, she realized she needed to find her way back to the city she knew her dream job was waiting for her in fashion.
             </p>
           </div>
 
           <div className="one-half column">
             <p>
-              <img className="thumbnail" src="img/kal-baby.jpg" alt="Kal" /> Kal is a burly Eastern European who moved from his
-              homeland Bulgaria at the young age of 22 to the lovely city of Toronto. Kal then found himself in the IT mecca of
-              Seattle and realized after 9 years of the beautiful mountain backdrop and serene lakes that he needs to escape to the
-              center of the universe, New York.
+              <img className="thumbnail" src="img/kal-baby.jpg" alt="Kal" /> Kal is a burly and impatient Eastern European who moved from his
+              homeland Bulgaria to the lovely city of Toronto at the young and tender age of 22. Kal then found himself in the IT mecca of
+              Seattle and realized after 9 years of the beautiful mountain backdrop and serene lakes that he needs to escape to the center of
+              the universe, New York.
             </p>
           </div>
         </div>
@@ -77,12 +76,16 @@ const websiteContent = (
       <div className="container">
         <div className="one-half column">
           <h2>CEREMONY</h2>
-          <p>16:00 @ Sveti Marak (St Mark&#39;s) Church Courtyard</p>
+          <p>16:00 @ Sveti Marak Church Courtyard</p>
           <p>
             <img className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" />
           </p>
-          <p>
+          <p style={{textAlign: "center"}}>
             <a href="https://goo.gl/maps/BvKtzdCKGDm">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
+          </p>
+          <p>Located to the left of the Loggia and Clock Tower (the Town Hall) and behind the market and row of shops at the back of the
+             harbour. Follow signs to the Hotel Park and continue past the café until you arrive at the Church. Also have a look at the
+             tourist map above.
           </p>
         </div>
         <div className="one-half column">
@@ -91,8 +94,12 @@ const websiteContent = (
           <p>
             <img className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" />
           </p>
-          <p>
+          <p style={{textAlign: "center"}}>
             <a href="https://goo.gl/maps/MGBa94iBaA42">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
+          </p>
+          <p>Located a 5-7 minute walk from Sveti Marak and there will be someone to lead the way. Ladies, please bear in mind that the walk
+             is over a cobbled path, which would not be comfortable if wearing heels, so you might consider bringing a pair of flip-flops for
+             the trek.
           </p>
         </div>
       </div>
@@ -194,6 +201,10 @@ const websiteContent = (
          reading various tour guides and traveller comments it appears that there are drivable roads and paid parking spots so it should
          not be a problem. However we will update this section more as we go on our exploratory trip in the spring.
       </p>
+      <p>
+         Please not that unless you are coming by car to the island of Hvar, there should not be a need for you to rent one unless you want
+         to explore the island. There are many organized boat tripts to discover the surrounding Dalmatian islands.
+      </p>
 
       <hr />
 
@@ -205,7 +216,8 @@ const websiteContent = (
       <p>For guests wishing to stay in a hotel, the <a href="http://www.suncanihvar.com/">Suncani Hvar</a> chain of hotels offers a 20%
          discount using <SecretTooltip fnTooltip={() => { return 'WEDDKALOIANJOCELYN'; }}>this code</SecretTooltip> (please click on the
          'this' in order to show it or call us if it doesn't work). The code must be entered in the <i>"Corporate/Promo Code ?"</i> section
-         for the discounted prices to apply and is valid for staying 5 days prior and 5 days after the wedding day.
+         for the discounted prices to apply and is valid for staying 5 days prior and 5 days after the wedding day. Please note that hotels
+         can be somewhat pricey, so it is definitely worth researching the available AirBnB apartments.
       </p>
     </TopicContainer>
 

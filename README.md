@@ -22,6 +22,8 @@ npm install && npm start
 
 Implemented on Mac using [Microsoft Visual Studio Code](https://code.visualstudio.com/).
 
+Site template idea borrowed from http://sarahlovesbradley.com/.
+
 ## LICENSE
 
 (The MIT License)
