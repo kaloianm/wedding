@@ -38,20 +38,21 @@ const websiteContent = (
         <div className="row">
           <div className="one-half column">
             <p>
-              <img className="thumbnail" src="img/jocelyn-baby.jpg" alt="Jocelyn" /> Jocelyn is a sweet and giving girl who always sees the
-              beauty in people. As exciting as it was to be rasied in New York, she made it her mission to live and explore as many
-              beautiful cities as she could. Thanks to her beloved sister Wendy it was possible to jump from the neon nights of Miami, through
-              the diverse city of London, to then learn the leisurely ways of Italy. While Jocelyn was exploring and realizing her passion in
-              life, she realized she needed to find her way back to the city she knew her dream job was waiting for her in fashion.
+              <a href="img/jocelyn-baby.jpg"><img className="thumbnail" src="img/jocelyn-baby.jpg" alt="Jocelyn" /></a>
+              Jocelyn is a sweet and giving girl who always sees the beauty in people. As exciting as it was to be rasied in New York, she made
+              it her mission to live and explore as many beautiful cities as she could. Thanks to her beloved sister Wendy it was possible to
+              jump from the neon nights of Miami, through the diverse city of London, to then learn the leisurely ways of Italy. While Jocelyn
+              was exploring and realizing her passion in life, she realized she needed to find her way back to the city she knew her dream job
+              was waiting for her in fashion.
             </p>
           </div>
 
           <div className="one-half column">
             <p>
-              <img className="thumbnail" src="img/kal-baby.jpg" alt="Kal" /> Kal is a burly and impatient Eastern European who moved from his
-              homeland Bulgaria to the lovely city of Toronto at the young and tender age of 22. Kal then found himself in the IT mecca of
-              Seattle and realized after 9 years of the beautiful mountain backdrop and serene lakes that he needs to escape to the center of
-              the universe, New York.
+              <a href="img/kal-baby.jpg"><img className="thumbnail" src="img/kal-baby.jpg" alt="Kal" /></a>
+              Kal is a burly and impatient Eastern European. He moved from his homeland Bulgaria to the lovely city of Toronto at the young and
+              tender age of 22. Kal then found himself in the IT mecca of Seattle and realized after 9 years of the beautiful mountain backdrop
+              and serene lakes that he needs to escape to the center of the universe, New York.
             </p>
           </div>
         </div>
@@ -78,7 +79,7 @@ const websiteContent = (
           <h2>CEREMONY</h2>
           <p>16:00 @ Sveti Marak Church Courtyard</p>
           <p>
-            <img className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" />
+            <a href="img/svetimarak.jpg"><img className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" /></a>
           </p>
           <p style={{textAlign: "center"}}>
             <a href="https://goo.gl/maps/7oeGdedkbM72">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
@@ -92,14 +93,14 @@ const websiteContent = (
           <h2>RECEPTION</h2>
           <p>17:00 @ Bonj les Bains Beach Club</p>
           <p>
-            <img className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" />
+            <a href="img/bonjlesbainsbeachclub.jpg"><img className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" /></a>
           </p>
           <p style={{textAlign: "center"}}>
             <a href="https://goo.gl/maps/MGBa94iBaA42">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
           </p>
           <p>Located a 10 minute walk from Sveti Marak and there will be someone to lead the way. Ladies, please bear in mind that the walk
-             is over a cobbled path, which would not be comfortable if wearing heels, so you might consider bringing a pair of flip-flops for
-             the trek.
+             is over a cobbled path, which would not be comfortable if wearing heels, so you might consider bringing a pair of flats for the
+             trek.
           </p>
         </div>
       </div>
