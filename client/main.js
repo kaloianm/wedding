@@ -81,7 +81,7 @@ const websiteContent = (
             <img className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" />
           </p>
           <p style={{textAlign: "center"}}>
-            <a href="https://goo.gl/maps/BvKtzdCKGDm">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
+            <a href="https://goo.gl/maps/7oeGdedkbM72">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
           </p>
           <p>Located to the left of the Loggia and Clock Tower (the Town Hall) and behind the market and row of shops at the back of the
              harbour. Follow signs to the Hotel Park and continue past the café until you arrive at the Church. Also have a look at the
@@ -97,7 +97,7 @@ const websiteContent = (
           <p style={{textAlign: "center"}}>
             <a href="https://goo.gl/maps/MGBa94iBaA42">Google Maps</a> | <a href="img/city-hvar-map.jpg">Tourist Map</a>
           </p>
-          <p>Located a 5-7 minute walk from Sveti Marak and there will be someone to lead the way. Ladies, please bear in mind that the walk
+          <p>Located a 10 minute walk from Sveti Marak and there will be someone to lead the way. Ladies, please bear in mind that the walk
              is over a cobbled path, which would not be comfortable if wearing heels, so you might consider bringing a pair of flip-flops for
              the trek.
           </p>
