@@ -192,7 +192,7 @@ const websiteContent = (
          sailing part of the journey takes between 45 min to 1 hour, which is similar to the catamaran service, but is a little bit more
          convenient because it also includes a pickup from the airport. If you choose this option, there is a 5% discount
          using <SecretTooltip fnTooltip={() => { return 'adriaticweddings'; }}>this code</SecretTooltip> (please click on the 'this' in
-         order to display the code).
+         order to show it).
       </p>
 
       <hr />
@@ -214,11 +214,15 @@ const websiteContent = (
          on <a href="https://goo.gl/uHTDYn">AirBnB</a>. The wedding will be in the Amfora Resort so any accommodation within walking
          distance from there should be fine.
       </p>
+      <p>From our research we have found that hotels are fairly expensive and there are very nice AirBnB options available, so we highly
+         recommend doing that.
+      </p>
       <p>For guests wishing to stay in a hotel, the <a href="http://www.suncanihvar.com/">Suncani Hvar</a> chain of hotels offers a 20%
          discount using <SecretTooltip fnTooltip={() => { return 'WEDDKALOIANJOCELYN'; }}>this code</SecretTooltip> (please click on the
-         'this' in order to show it or call us if it doesn't work). The code must be entered in the <i>"Corporate/Promo Code ?"</i> section
-         for the discounted prices to apply and is valid for staying 5 days prior and 5 days after the wedding day. Please note that hotels
-         can be somewhat pricey, so it is definitely worth researching the available AirBnB apartments.
+         'this' in order to show it). The code must be entered in the <i>"Corporate/Promo Code ?"</i> section for the discounted prices to
+         apply and is valid for staying 5 days prior and 5 days after the wedding day. While this code indeed reduces the listed prices,
+         we have found that booking through <a href="https://goo.gl/2xzaIg">Expedia</a> or <a href="https://goo.gl/z6zsZk">Hotels.com</a>&nbsp;
+         shows about the same prices or in some cases even cheaper, so please bear that in mind as well.
       </p>
     </TopicContainer>
 
