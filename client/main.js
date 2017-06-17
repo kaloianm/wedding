@@ -156,24 +156,39 @@ const websiteContent = (
       </p>
 
       <h2>FERRY TO THE ISLAND OF HVAR</h2>
-      <p>The Split airport is located about 25km (16mi) from the seaport from where the ferries leave for Hvar. According to the bus
-         company's <a href="http://www.buscroatia.com/airport-split/">website</a> a taxi should cost about 35 EUR/40 USD for 1-3 people and
-         a bus should be around 4 EUR/5 USD per person.
+      <p>The Split airport is located about 25km (16mi) from the harbour from where the ferries leave for Hvar. According to the bus
+         company's <a href="http://www.buscroatia.com/airport-split/">website</a> a taxi should cost about 35 EUR/40 USD for 1-3 people
+         while the bus costs around 4 EUR/5 USD per person. Unless you are in a real hurry to catch a ferry, we recommend taking the
+         bus. They are big white coaches just a few steps to the left after you exit though the main airport entrance and we found them
+         to be very comfortable and convenient. They accept both cash and credit card for payment.
       </p>
 
       <div id="gmap">
         <iframe src="https://www.google.com/maps/d/embed?mid=1QdPbr1DgM7Cgiw2PwAbLgpINiSI"></iframe>
       </div>
 
+      <p>The bus or taxi will drop you off at the Split bus station, which is on the water. The bus drop-off is only 5 minutes walk
+         from the ferry ticket kiosk. There you can buy tickets or ask for the terminal from which your ferry leaves if it is unclear
+         from the large electronic panel infront of it, listing the departures. The ferry ticket kiosk looks like this:
+      </p>
+      <p>
+         <img className="large-image" src="img/split-ferry-ticket-kiosk.jpg" alt="Ferry tickets kiosk" />
+      </p>
+
       <p>Once you are at the seaport and looking for transportation to the island, please note that there are two landing spots on the
          island - Hvar Town and the Old Town (Stari Grad). The wedding will be in Hvar Town, which is in the south-west end of the island,
          not in the Old Town, which is on the nortern end. Please make sure you are boarding the right ferry, but even if you make a
-         mistake, stay calm because there is a bus between the two.
+         mistake, stay calm because there is a very convenient bus between the two. As a rule, the car ferries go to Old Town (Stari Grad)
+         and take about 2 hours to travel and the fast passenger ferries (catamaran) go directly to Hvar Town and take 1 hour.
       </p>
 
       <div id="gmap">
         <iframe src="https://www.google.com/maps/d/embed?mid=1H0mc9QKj_OwW1TZCWtQc_tb3s9k"></iframe>
       </div>
+
+      <p>There are two ferry companies which serve the route from Split to Hvar - Jadrolinija and Kapetan Luka. Below we have information
+         for each of them.
+      </p>
 
       <h3><a href="http://www.jadrolinija.hr/en/ferry-croatia">Jadrolinija</a></h3>
       <p>This is a high-speed catamaran service from Split to Hvar Town which takes about 65 min. This is the fastest option and costs
@@ -188,23 +203,26 @@ const websiteContent = (
       <br />
 
       <h3><a href="https://www.atlantis-marine.net/en/croatia-boat-transfers">Chartered Speed Boat</a></h3>
-      <p>If you are coming as a group, this site has information for inclusive transportation packages with pickup from the airport. The
-         sailing part of the journey takes between 45 min to 1 hour, which is similar to the catamaran service, but is a little bit more
-         convenient because it also includes a pickup from the airport. If you choose this option, there is a 5% discount
-         using <SecretTooltip fnTooltip={() => { return 'adriaticweddings'; }}>this code</SecretTooltip> (please click on the 'this' in
-         order to show it).
+      <p>If you are coming as a group or feel like a one percenter, this site has information for inclusive transportation packages with
+         pickup from the airport. The sailing part of the journey takes between 45 min to 1 hour, which is similar to the catamaran service,
+         but is a little bit more convenient because it also includes a pickup from the airport. If you choose this option, there is a 5%
+         discount using <SecretTooltip fnTooltip={() => { return 'adriaticweddings'; }}>this code</SecretTooltip> (please click on the
+         'this' in order to show it).
       </p>
 
       <hr />
 
       <h2>DRIVING</h2>
-      <p>For those renting a car or driving to Croatia, we don't yet know what are the driving or parking conditions on the island. From
-         reading various tour guides and traveller comments it appears that there are drivable roads and paid parking spots so it should
-         not be a problem. However we will update this section more as we go on our exploratory trip in the spring.
+      <p>For those renting a car or driving to Croatia, we found the driving conditions on the island to be good and there is a
+         parking spot right in the center of the town for 1 EUR/hour or 12 EUR/day.
       </p>
       <p>
-         Please not that unless you are coming by car to the island of Hvar, there should not be a need for you to rent one unless you want
-         to explore the island. There are many organized boat tripts to discover the surrounding Dalmatian islands.
+         Please note that unless you are coming by car to the island of Hvar, there should not be a need for you to rent one. There are
+         many organized boat trips to discover the surrounding Dalmatian islands and cabrio cars can be rented daily at a fairly decent
+         price from Hvar itself and the paperwork is not that much. For example we rented this funny car for about 60 USD for a day trip:
+      </p>
+      <p>
+         <img className="large-image" src="img/hvar-rental-car.jpg" alt="Day car rental" />
       </p>
 
       <hr />
@@ -229,8 +247,8 @@ const websiteContent = (
     <TopicContainer id="thingstodo" title="Things to do in Croatia">
       <p>Since all of you are coming from different parts of the world, we presume that you would like to make a full vacation out of your
          trip to Croatia. In this section we are listing some of the main tourist places to visit and have suggestions for routes to take.
-         As a disclaimer, these suggestions are compiled from various online sources such as Lonely Planet and not locations we have actually
-         visited, but trust us - they are awesome :)
+         As a disclaimer, some of these suggestions are compiled from various online sources such as Lonely Planet and not locations we
+         have actually visited, but trust us - they are awesome :)
       </p>
       <br />
 
