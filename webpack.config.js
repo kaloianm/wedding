@@ -1,11 +1,14 @@
+'use strict';
+
 var nodeExternals = require('webpack-node-externals');
+var path = require('path');
 
 module.exports = [
     {   
         name: 'Server-side application',
         entry: './server/app.js',
         output: {
-            path: './bin',
+            path: path.resolve(__dirname, 'bin'),
             filename: 'app.bundle.js'
         },
         target: 'node',
@@ -27,7 +30,7 @@ module.exports = [
         name: 'Client-side application',
         entry: './client/main.js',
         output: {
-            path: './static/js',
+            path: path.resolve(__dirname,'static/js'),
             filename: 'bundle.js'
         },
         target: 'web',
