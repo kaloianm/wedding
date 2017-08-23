@@ -77,7 +77,7 @@ const websiteContent = (
       <div className="container">
         <div className="one-half column">
           <h2>CEREMONY</h2>
-          <p>16:00 @ Sveti Marak Church Courtyard</p>
+          <p>16:45 @ Sveti Marak Church Courtyard</p>
           <p>
             <a href="img/svetimarak.jpg"><img className="location-image" src="img/svetimarak.jpg" alt="Sveti Marak (St Mark's)" /></a>
           </p>
@@ -91,7 +91,7 @@ const websiteContent = (
         </div>
         <div className="one-half column">
           <h2>RECEPTION</h2>
-          <p>17:00 @ Bonj les Bains Beach Club</p>
+          <p>18:15 @ Bonj les Bains Beach Club</p>
           <p>
             <a href="img/bonjlesbainsbeachclub.jpg"><img className="location-image" src="img/bonjlesbainsbeachclub.jpg" alt="Bonj Les Bains Beach Club" /></a>
           </p>
@@ -108,13 +108,35 @@ const websiteContent = (
       <hr />
 
       <h2>ON THE WEDDING DAY</h2>
-      <p>Coming Soon!
+      <p>The ceremony will start at 17:00 at the Sveti Marak church courtyard. Please arrive 10 to 15 minutes before so everybody can get
+         seated and so we can start on time.
+      </p>
+      <p>After the ceremony we will raise a glass of champagne and someone will lead you to the reception where drinks and appetizers will
+         be served.
+      </p>
+      <p>
+        Wedding attire is summer formal. Gentlemen, please wear a light suit with which you will be comfortable with the heat. And ladies,
+        you look pretty as you are, in your formal summer dresses :)
       </p>
 
       <hr />
 
-      <h2>BEFORE &amp; AFTER</h2>
-      <p>Coming soon, but be prepared for a cocktail evening out on the day before and a hangover brunch on the day after :)
+      <h2>DAY BEFORE THE WEDDING (30 August)</h2>
+      <p>Welcome cocktails will be held on the terrace of <a href="https://goo.gl/Vd3ZJd">Restaurant Park Hvar</a> from 18:30 to 23:30.
+      </p>
+      <p>
+         Cocktail night attire is dressy-casual.
+      </p>
+
+      <hr />
+
+      <h2>DAY AFTER THE WEDDING (1 September)</h2>
+      <p>Farewell brunch will be held at 11:00 at the&nbsp;
+         <a href="http://www.suncanihvar.com/amfora-hvar-grand-beach-resort/maestral-balkan-grill.html">Maestral Restaurant</a>. It is located
+         just a few meters on the path that takes you to the <a href="https://goo.gl/r9TFHt">wedding venue</a>.
+      </p>
+      <p>
+         Brunch attire is wear anything you want :)
       </p>
     </TopicContainer>
 
